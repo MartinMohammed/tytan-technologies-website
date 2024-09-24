@@ -17,7 +17,7 @@ function FlexContainer({
   leftComponent,
   rightComponent,
   gap = 0,
-  padding = "0px", // Default padding value
+  padding = "75px 80px", // Default padding value
   alignItems = "start", // Default align-items value
 }: IFlexContainerProps) {
   const rightFlexPercentage = 100 - leftFlexPercentage;
@@ -32,7 +32,7 @@ function FlexContainer({
   };
 
   const rightStyle: CSSProperties = {
-    flex: `0 0 ${rightFlexPercentage}%`,
+    flex: `0 1 ${rightFlexPercentage}%`,
   };
 
   return (

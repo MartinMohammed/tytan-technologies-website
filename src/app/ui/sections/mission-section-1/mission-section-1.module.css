@@ -1,0 +1,19 @@
+.mission_section_1 {
+}
+
+.sub_heading {
+  margin-bottom: 10px; /* Space below the sub-heading */
+  color: var(--text_secondary); /* Adjust color based on your design system */
+}
+
+.primary_heading {
+  margin: 0; /* Resets margin to maintain alignment */
+  color: var(--text_primary); /* Adjust color based on your design system */
+}
+
+.body {
+  line-height: 1.6; /* Improves readability */
+  color: var(--text_secondary); /* Adjust color based on your design system */
+  margin-bottom: 1rem; /* Resets margin for consistent spacing */
+  text-wrap: wrap;
+}

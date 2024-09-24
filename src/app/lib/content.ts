@@ -32,7 +32,7 @@ export const HeroSectionContent = {
 export const MissionSection1Content = {
   // Settings for <FlexContainer/>
   flexContainer: {
-    leftFlexPercentage: 38,
+    leftFlexPercentage: 41.25,
     gap: 35,
     alignItems: "center",
     padding: "75px 80px",
@@ -46,6 +46,28 @@ export const MissionSection1Content = {
         "TYTAN Technologies is at the forefront of developing AI-driven counter-drone solutions to protect and empower democratic nations. By combining advanced technology with agile, scalable, and cost-effective systems, we address the evolving challenges of modern warfare.",
         "Our commitment is to ensure technological sovereignty and enhance defense capabilities through relentless innovation and close collaboration with end-users.",
       ],
+    },
+  },
+};
+
+export const MissionSection2Content = {
+  // Settings for <FlexContainer/>
+  flexContainer: {
+    leftFlexPercentage: 41.25,
+    gap: 35,
+    alignItems: "center",
+    padding: "75px 80px",
+    leftContainer: {
+      primaryHeading: "Comprehensive Protection, Integrated Approach.",
+      subHeading:
+        "At TYTAN Technologies, we champion a fully integrated security approach, spanning the entire threat response spectrum. We aim to develop an ecosystem of autonomous systems delivering adaptable and scalable solutions,  enhancing overall security and operational effectiveness.",
+    },
+    rightContainer: {
+      video: {
+        src: "/tytan_anim.mp4",
+        alt: "Tytan animated video for full flow of product.",
+        width: 715,
+      },
     },
   },
 };

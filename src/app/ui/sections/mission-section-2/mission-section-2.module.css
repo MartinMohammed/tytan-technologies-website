@@ -1,0 +1,14 @@
+.mission_section_2 {
+}
+
+.sub_heading {
+  color: var(--text_secondary); /* Adjust color based on your design system */
+}
+
+.primary_heading {
+  margin-bottom: 35px; /* Space below the sub-heading */
+  color: var(--text_primary); /* Adjust color based on your design system */
+}
+
+.video {
+}
