@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@/app/ui/sections/hero-section/hero-section.module.css";
 import Image from "next/image";
-import { HeroSectionContent } from "../../content"; // Ensure that the path to the content file is correct
+import { HeroSectionContent } from "../../../lib/content"; // Ensure that the path to the content file is correct
 
 function HeroSection() {
   return (

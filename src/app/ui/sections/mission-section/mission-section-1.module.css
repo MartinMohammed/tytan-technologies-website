@@ -1,0 +1,34 @@
+.mission_section {
+  padding: 121px 80px; /* Adds left and right padding of 80px */
+}
+
+.mission_section_container {
+  display: flex; /* Enables Flexbox layout */
+  justify-content: space-between; /* Ensures space between the left and right sections */
+  align-items: center;
+  gap: 35px;
+}
+
+.mission_section_left {
+  flex: 1 1 40%; /* Corrected: Still will not render properly */
+}
+
+.mission_section_right {
+  flex: 2 1 60%; /* Corrected: Still will not render properly */
+}
+
+.sub_heading {
+  margin-bottom: 8px; /* Space below the sub-heading */
+  color: var(--text_secondary); /* Adjust color based on your design system */
+}
+
+.primary_heading {
+  margin: 0; /* Resets margin to maintain alignment */
+  color: var(--text_primary); /* Adjust color based on your design system */
+}
+
+.body {
+  line-height: 1.6; /* Improves readability */
+  color: var(--text_secondary); /* Adjust color based on your design system */
+  margin: 1rem; /* Resets margin for consistent spacing */
+}

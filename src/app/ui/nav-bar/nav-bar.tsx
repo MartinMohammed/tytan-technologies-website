@@ -4,7 +4,7 @@ import styles from "@/app/ui/nav-bar/nav-bar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import NavItem from "./nav-item";
-import { NavBarContent } from "../content";
+import { NavBarContent } from "../../lib/content";
 
 function NavBar() {
   return (
@@ -32,10 +32,10 @@ function NavBar() {
         </div>
         <div className={styles.burger_menu}>
           <Image
-            src={"/burger_menu.svg"}
-            alt="burger menu icon"
-            width={36}
-            height={24}
+            src={NavBarContent.burgerMenu.src}
+            alt={NavBarContent.burgerMenu.alt}
+            width={NavBarContent.burgerMenu.width}
+            height={NavBarContent.burgerMenu.height}
           />
         </div>
       </div>

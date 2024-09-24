@@ -1,0 +1,15 @@
+.flexContainer {
+  display: flex;
+  gap: var(--gap, 0px); /* The gap is set via a CSS variable */
+  padding: var(--padding); /* Applies the padding dynamically */
+  align-items: var(
+    --align-items
+  ); /* Centers content vertically by default or as specified */
+}
+
+.containerLeft,
+.containerRight {
+  display: flex;
+  align-items: var(--align-items); /* Applies dynamic vertical alignment */
+  justify-content: center; /* Optional: Centers content horizontally */
+}
