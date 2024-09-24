@@ -1,0 +1,32 @@
+/* nav-bar.module.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 105px;
+  padding: 5px 40px; /* Top/Bottom: 5px, Left/Right: 40px */
+}
+
+.navbar_left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar_right {
+  display: flex;
+  align-items: center;
+  gap: 46px; /* Gap between nav items and burger menu */
+}
+
+.nav_items {
+  display: flex;
+  gap: 46px; /* Gap between nav items */
+}
+
+.burger_menu {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}

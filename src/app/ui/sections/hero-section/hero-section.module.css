@@ -1,0 +1,32 @@
+.hero_section {
+  position: relative; /* Ensures positioning within this section */
+}
+
+.hero_container {
+  position: relative; /* Allows absolute positioning of child elements */
+}
+
+.hero_image {
+  display: block; /* Ensures the image takes its own space */
+  width: 100%;
+  height: auto;
+}
+
+.text_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  position: absolute; /* Allows precise positioning */
+  left: 38px; /* Positions 38px from the left of the container */
+  bottom: 103px; /* Positions 103px up from the bottom of the container */
+  color: var(--text_primary); /* Adjust based on design needs */
+}
+
+.sub_heading {
+  margin: 0;
+}
+
+.primary_heading {
+  margin: 0;
+}
