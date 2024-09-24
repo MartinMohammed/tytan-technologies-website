@@ -1,6 +1,6 @@
 // FlexContainer.jsx
 import React, { CSSProperties, ReactNode } from "react";
-import styles from "@/app/ui/flex-container/flex-container.module.css";
+import styles from "@/app/ui/components/flex-container/flex-container.module.css";
 
 interface IFlexContainerProps {
   leftFlexPercentage?: number;

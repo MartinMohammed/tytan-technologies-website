@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@/app/ui/sections/mission-section-2/mission-section-2.module.css";
 import { MissionSection2Content } from "@/app/lib/content";
-import FlexContainer from "@/app/ui/flex-container/flex-container";
+import FlexContainer from "@/app/ui/components/flex-container/flex-container";
 
 function MissionSection2() {
   const leftContent = (
