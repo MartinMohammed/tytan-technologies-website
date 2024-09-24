@@ -1,9 +1,9 @@
-export const NavBarContent = {
+export const NavbarContent = {
   logo: {
     src: "/tytan_logo_white.svg",
     alt: "Tytan Technologies Logo",
-    height: 46,
     width: 183,
+    height: 46,
   },
   // individual nav items
   navItems: [
@@ -11,7 +11,7 @@ export const NavBarContent = {
     { text: "Join Us", href: "#" },
   ],
   burgerMenu: {
-    src: "/burger_menu.svg",
+    src: "/burger_menu_icon.svg",
     alt: "burger menu icon",
     width: 36,
     height: 24,
@@ -20,7 +20,7 @@ export const NavBarContent = {
 
 export const HeroSectionContent = {
   video: {
-    src: "/opterra_interception_bounding_box.png",
+    src: "/opterra_interception_bounding_box.gif",
     alt: "Opterra interception bounding box gif.",
     width: 1438.22,
     height: 810,
@@ -35,6 +35,7 @@ export const MissionSection1Content = {
     leftFlexPercentage: 41.25,
     gap: 35,
     alignItems: "center",
+    justifyContent: "left",
     padding: "75px 80px",
     leftContainer: {
       primaryHeading: "To set the global standard in autonomous systems.",
@@ -56,6 +57,7 @@ export const MissionSection2Content = {
     leftFlexPercentage: 41.25,
     gap: 35,
     alignItems: "center",
+    justifyContent: "left",
     padding: "75px 80px",
     leftContainer: {
       primaryHeading: "Comprehensive Protection, Integrated Approach.",
@@ -68,6 +70,55 @@ export const MissionSection2Content = {
         alt: "Tytan animated video for full flow of product.",
         width: 715,
       },
+    },
+  },
+};
+
+export const FooterContent = {
+  flexContainer: {
+    leftFlexPercentage: 48,
+    gap: 0,
+    alignItems: "center",
+    justifyContent: "left",
+    padding: "75px 40px",
+    leftContainer: {
+      logo: {
+        src: "/tytan_logo_white.svg",
+        alt: "Tytan Technologies Logo",
+        width: 205.14,
+        height: 52,
+      },
+    },
+    rightContainer: {
+      // individual nav items
+      footerItems: [
+        { text: "IMPRINT", href: "#" },
+        { text: "PRIVACY & LEGAL", href: "#" },
+        { text: "CONTACT", href: "#" },
+      ],
+      footerSocialIcons: [
+        {
+          src: "/youtube-icon.svg",
+          alt: "Youtube Icon",
+          href: "#",
+          width: 42,
+          height: 42,
+        },
+        {
+          src: "/x-icon.svg",
+          alt: "X Icon",
+          href: "#",
+          width: 42,
+          height: 42,
+        },
+        {
+          src: "/linkedIn_icon.svg",
+          alt: "LinkedIn Icon",
+          href: "#",
+          width: 42,
+          height: 42,
+        },
+      ],
     },
   },
 };

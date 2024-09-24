@@ -12,6 +12,7 @@ function HeroSection() {
           alt={HeroSectionContent.video.alt}
           width={HeroSectionContent.video.width}
           height={HeroSectionContent.video.height}
+          unoptimized
           className={styles.hero_image}
         />
         <div className={styles.text_container}>

@@ -2,14 +2,17 @@ import React from "react";
 import styles from "@/app/ui/sections/mission-section-1/mission-section-1.module.css";
 import { MissionSection1Content } from "@/app/lib/content";
 import FlexContainer from "@/app/ui/components/flex-container/flex-container";
+import { TEXT_STYLES } from "@/app/lib/definition";
 
 function MissionSection1() {
   const leftContent = (
     <div>
-      <h3 className={`${styles.sub_heading} small_text_style`}>
+      <h3 className={`${styles.sub_heading} ${TEXT_STYLES.SMALL_TEXT_STYLE}`}>
         {MissionSection1Content.flexContainer.leftContainer.subHeading}
       </h3>
-      <h2 className={`${styles.primary_heading} medium_text_style`}>
+      <h2
+        className={`${styles.primary_heading} ${TEXT_STYLES.MEDIUM_TEXT_STYLE}`}
+      >
         {MissionSection1Content.flexContainer.leftContainer.primaryHeading}
       </h2>
     </div>
@@ -22,7 +25,7 @@ function MissionSection1() {
           return (
             <p
               key={`body-part-${index}`}
-              className={`${styles.body} small_text_style`}
+              className={`${styles.body} ${TEXT_STYLES.SMALL_TEXT_STYLE}`}
             >
               {bodyPart}
             </p>
@@ -43,6 +46,7 @@ function MissionSection1() {
         rightComponent={rightContent}
         padding={MissionSection1Content.flexContainer.padding}
         alignItems={MissionSection1Content.flexContainer.alignItems}
+        justifyContent={MissionSection1Content.flexContainer.justifyContent}
       />
     </section>
   );

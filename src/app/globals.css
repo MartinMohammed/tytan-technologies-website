@@ -10,9 +10,8 @@
   /* --border_radius_normal: 15; */
   /* --border_radius_small: 5; */
   /* --button: 45px; */
-  --nav_item: 20px;
-  --footer_item: 18px;
-  --nav_sub_header: 20px;
+  /* --nav_sub_header: 20px; */
+  --link_item: 20px;
   --carousel_nav_item_text_size: 21;
 }
 
@@ -56,8 +55,8 @@ a {
 
 /* Text styles from Figma */
 
-.nav_item_text_style {
-  font-size: var(--nav_item);
+.link_item_text_style {
+  font-size: var(--link_item);
   font-weight: 300;
   font-family: var(--font-anek-latin-expanded), Arial, Helvetica, sans-serif;
 }
@@ -80,17 +79,23 @@ a {
   font-family: var(--font-anek-latin-expanded), Arial, Helvetica, sans-serif;
 }
 
+.extra_small_text_style {
+  font-size: var(--extra_small_text_size);
+  font-weight: 300;
+  font-family: var(--font-anek-latin-expanded), Arial, Helvetica, sans-serif;
+}
+
 /* .button_text_style {
   font-size: var(--small_text_size);
   font-weight: 400;
   font-family: var(--font-anek-latin-expanded), Arial, Helvetica, sans-serif;
 } */
 
-.nav_sub_heading_text_style {
+/* .nav_sub_heading_text_style {
   font-size: var(--nav_sub_header);
   font-weight: 400;
   font-family: var(--font-anek-latin-expanded), Arial, Helvetica, sans-serif;
-}
+} */
 
 .carousel_nav_item_text_style {
   font-size: var(--carousel_nav_item_text_size);
@@ -98,14 +103,31 @@ a {
   font-family: var(--font-anek-latin-expanded), Arial, Helvetica, sans-serif;
 }
 
-.footer_item_text_style {
-  font-size: var(--footer_item);
-  font-weight: 400;
-  font-family: var(--font-anek-latin-expanded), Arial, Helvetica, sans-serif;
+/* Animations */
+.hover_underline {
+  text-decoration: none; /* Remove underline from links */
+  position: relative; /* To position the ::after element */
+  transition: color 0.3s ease; /* Smooth transition for hover effects */
 }
 
-.extra_small_text_style {
-  font-size: var(--extra_small_text_size);
-  font-weight: 300;
-  font-family: var(--font-anek-latin-expanded), Arial, Helvetica, sans-serif;
+.hover_underline::after {
+  content: ""; /* Creates the underline element */
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Positioned 5px below the text to create the gap */
+  width: 0; /* Starts with no width */
+  height: 2px; /* Height of the underline */
+  background-color: var(--text_primary); /* Color of the underline */
+  transition: width 0.3s ease; /* Smooth transition effect */
+}
+
+.hover_underline:hover {
+  color: var(
+    --text_secondary
+  ); /* Light gray hover effect to enhance interactivity */
+}
+
+.hover_underline:hover::after {
+  width: 120%; /* Expands the underline to 120% width on hover */
+  left: -10%; /* Adjusts left position to center the extended line */
 }

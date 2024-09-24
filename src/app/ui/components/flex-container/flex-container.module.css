@@ -11,5 +11,7 @@
 .containerRight {
   display: flex;
   align-items: var(--align-items); /* Applies dynamic vertical alignment */
-  justify-content: center; /* Optional: Centers content horizontally */
+  justify-content: var(
+    --justify-content
+  ); /* Optional: Centers content horizontally */
 }

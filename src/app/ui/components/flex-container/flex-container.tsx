@@ -10,6 +10,7 @@ interface IFlexContainerProps {
   gap?: number;
   padding?: string;
   alignItems?: string; // Optional align-items property
+  justifyContent?: string; // Optional justify-content property
 }
 
 function FlexContainer({
@@ -19,12 +20,14 @@ function FlexContainer({
   gap = 0,
   padding = "75px 80px", // Default padding value
   alignItems = "start", // Default align-items value
+  justifyContent = "left", // Default justify-content value inside flex items
 }: IFlexContainerProps) {
   const rightFlexPercentage = 100 - leftFlexPercentage;
   const containerStyle: CSSProperties = {
     "--gap": `${gap}px`,
     "--padding": padding,
     "--align-items": alignItems, // Passing align-items value
+    "--justify-content": justifyContent, // Passing justify-content value
   } as React.CSSProperties;
 
   const leftStyle: CSSProperties = {
