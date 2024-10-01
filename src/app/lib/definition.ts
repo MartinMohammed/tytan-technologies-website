@@ -131,7 +131,7 @@ export interface ICareersSectionContentType {
   subHeading: string;
   itemsPerPage: 2;
   jobs: IJob[];
-  icon: ILinkImage;
+  icon: IImage;
 }
 // --- News Section Content Type
 

@@ -162,7 +162,6 @@ export const CareersSectionContent: ICareersSectionContentType = {
   icon: {
     src: "/arrow_right_icon.svg",
     alt: "Arrow Right Icon",
-    href: "#",
     width: 32,
     height: 32,
   },

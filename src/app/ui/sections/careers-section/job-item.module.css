@@ -1,0 +1,34 @@
+.job_item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) auto; /* Use 3 equal columns for the first 3 items */
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--text_secondary);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job_item:hover {
+  cursor: pointer;
+  transform: translateY(-5px); /* Slight elevation on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* More prominent shadow */
+}
+
+.job_department,
+.job_product,
+.job_location {
+  color: var(--text_secondary);
+}
+
+.job_item_right_section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: right;
+  gap: 10px; /* Add a gap between the location and the icon */
+}
+
+.arrow {
+  vertical-align: middle; /* Aligns icon to the middle of the text */
+  width: 32px;
+  height: 32px;
+}

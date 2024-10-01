@@ -1,0 +1,23 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.page_number {
+  color: var(--text_primary);
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.page_number:hover {
+  background-color: var(--background_secondary);
+  transform: scale(1.1); /* Slightly increase the size on hover */
+}
+
+.page_number.active {
+  background-color: var(--background_secondary);
+  color: var(--text_primary);
+}
