@@ -1,38 +1,38 @@
 import React from "react";
 import styles from "@/app/ui/sections/careers-section/job-item.module.css";
-import { IImage, IJob, TEXT_STYLES_ENUM } from "@/app/lib/definition";
+import { IImage, IJobItem, TEXT_STYLES_ENUM } from "@/app/lib/definition";
 import Image from "next/image";
 import Link from "next/link";
 
 interface IJobItemProps {
-  job: IJob;
+  jobItem: IJobItem;
   icon: IImage;
 }
 
-function JobItem({ job, icon }: IJobItemProps) {
+function JobItem({ jobItem, icon }: IJobItemProps) {
   return (
-    <Link href={job.href} target="_blank">
+    <Link href={jobItem.href} target="_blank">
       <div className={styles.job_item}>
         <span
           className={`${TEXT_STYLES_ENUM.SMALL_TEXT_STYLE} ${styles.job_title}`}
         >
-          {job.title}
+          {jobItem.title}
         </span>
         <span
           className={`${TEXT_STYLES_ENUM.SMALL_TEXT_STYLE} ${styles.job_department}`}
         >
-          {job.department}
+          {jobItem.department}
         </span>
         <span
           className={`${TEXT_STYLES_ENUM.SMALL_TEXT_STYLE} ${styles.job_product}`}
         >
-          {job.product}
+          {jobItem.product}
         </span>
         <div className={styles.job_item_right_section}>
           <span
             className={`${TEXT_STYLES_ENUM.SMALL_TEXT_STYLE} ${styles.job_location}`}
           >
-            {job.location}
+            {jobItem.location}
           </span>
 
           <Image

@@ -8,17 +8,17 @@
   height: 100%;
 }
 
-.carousel_media_container {
+.carousel_item_media_container {
   position: relative;
   width: 100%;
   height: 726px; /* Constrained to height. */
 }
 
-.carousel_media_item {
+.carousel_item_media_item {
 }
 
 /* Caption Styles */
-.carousel_caption {
+.carousel_item_caption {
   position: absolute;
   gap: 10px;
   max-width: 650px;

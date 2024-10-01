@@ -1,0 +1,9 @@
+.news_list_container {
+}
+
+.news_list {
+  display: flex;
+  gap: 22px;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}

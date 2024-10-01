@@ -118,7 +118,7 @@ export interface ITytanInterceptor2ContentType {
 }
 
 // --- Career Section Content Type
-export interface IJob {
+export interface IJobItem {
   title: string;
   department: string;
   product: string;
@@ -129,11 +129,24 @@ export interface IJob {
 export interface ICareersSectionContentType {
   primaryHeading: string;
   subHeading: string;
-  itemsPerPage: 2;
-  jobs: IJob[];
+  itemsPerPage: number;
+  jobs: IJobItem[];
   icon: IImage;
 }
 // --- News Section Content Type
+export interface INewsSectionContentType {
+  primaryHeading: string;
+  itemsPerPage: number;
+  news: INewsItem[];
+  icon: IImage;
+}
+
+export interface INewsItem {
+  date: Date;
+  title: string;
+  image: IImage;
+  href: string;
+}
 
 // --- Footer ---
 export interface IFooterLeftContainer {

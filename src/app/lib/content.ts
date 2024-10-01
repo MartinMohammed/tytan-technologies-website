@@ -8,6 +8,7 @@ import {
   IMissionSection1ContentType,
   IMissionSection2ContentType,
   INavbarContentType,
+  INewsSectionContentType,
   ITytanInterceptor2ContentType,
 } from "@/app/lib/definition";
 
@@ -168,6 +169,46 @@ export const CareersSectionContent: ICareersSectionContentType = {
 };
 
 // --- News Section ---
+export const NewsSectionContent: INewsSectionContentType = {
+  primaryHeading: "Newsroom",
+  itemsPerPage: 3,
+  news: [
+    {
+      date: new Date("2024-06-18"), // Correct Date object format (ISO 8601)
+      title: "TYTAN featured in Handelsblatt",
+      image: {
+        src: "/tytan_featured_in_handelsblatt.jpeg", // Update with the actual image path
+        alt: "Tytan featured in Handelsblatt", // Added alt text
+      },
+      href: "https://www.linkedin.com/posts/tytan-technologies_innovation-europe-techsovereignty-activity-7171046096683712512-OjL6?utm_source=share&utm_medium=member_desktop", // Replace with actual href
+    },
+    {
+      date: new Date("2024-06-18"), // Correct Date object format
+      title: "TYTAN featured in ZEIT Online",
+      image: {
+        src: "/tytan_featured_in_zeit_online.jpeg", // Converted image to an object for consistency
+        alt: "Tytan featured in ZEIT Online", // Added alt text
+      },
+      href: "https://www.linkedin.com/posts/tytan-technologies_techsovereignty-dualusetech-innovation-activity-7198565369601486848-2B1L?utm_source=share&utm_medium=member_desktop",
+    },
+    {
+      date: new Date("2024-06-18"), // Correct Date object format
+      title: "TYTAN pitches at Munich Security Conference",
+      image: {
+        src: "/tytan_at_msc.jpeg", // Update with the actual image path
+        alt: "Tytan pitches at Munich Security Conference", // Added alt text
+      },
+      href: "https://www.linkedin.com/posts/yumurtaci_msc2024-mscinnovationnight-innovation-activity-7165259339325194240-e9Xq?utm_source=share&utm_medium=member_desktop",
+    },
+    // Add more items as needed
+  ],
+  icon: {
+    src: "/arrow_right_icon.svg",
+    alt: "Arrow Right Icon",
+    width: 32,
+    height: 32,
+  },
+};
 
 // --- Footer ---
 export const FooterContent: IFooterContentType = {

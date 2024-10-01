@@ -1,0 +1,17 @@
+.news_section {
+}
+
+.news_container {
+  color: var(--text_primary);
+}
+
+.heading_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 77px;
+}
+
+.primary_heading {
+  color: var(--text_primary);
+}

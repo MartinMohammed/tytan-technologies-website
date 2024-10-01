@@ -24,6 +24,7 @@ function CareersSection() {
           </div>
           <JobListContainer
             jobs={CareersSectionContent.jobs}
+            icon={CareersSectionContent.icon}
             itemsPerPage={2}
           />
         </div>

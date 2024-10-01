@@ -13,7 +13,7 @@ interface ICaptionProps {
 }
 
 const Caption: React.FC<ICaptionProps> = ({ title, description }) => (
-  <div className={styles.carousel_caption}>
+  <div className={styles.carousel_item_caption}>
     {title && (
       <h2
         className={`${styles.caption_title} ${TEXT_STYLES_ENUM.MEDIUM_TEXT_STYLE}`}
@@ -63,20 +63,20 @@ const CarouselItem = React.memo(
           <Caption title={item.title} description={item.description} />
         )}
 
-        <div className={styles.carousel_media_container}>
+        <div className={styles.carousel_item_media_container}>
           {item.content_type === CAROUSEL_ITEM_TYPE_ENUM.IMAGE ? (
             <Image
               src={item.src}
               alt={item.alt || "Carousel Image"}
               fill
               priority // Use only if high priority is necessary
-              className={`media_fit_container ${styles.carousel_media_item}`}
+              className={`media_fit_container ${styles.carousel_item_media_item}`}
             />
           ) : (
             <video
               src={item.src}
               {...videoControls}
-              className={`media_fit_container ${styles.carousel_media_item}`}
+              className={`media_fit_container ${styles.carousel_item_media_item}`}
             />
           )}
         </div>

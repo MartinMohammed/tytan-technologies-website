@@ -1,17 +1,21 @@
 "use client";
 import React, { useState } from "react";
 import styles from "@/app/ui/sections/careers-section/job-list-container.module.css";
-import { IJob } from "@/app/lib/definition";
-import { CareersSectionContent } from "@/app/lib/content";
+import { IImage, IJobItem } from "@/app/lib/definition";
 import Pagination from "@/app/ui/components/pagination/pagination";
 import JobItem from "@/app/ui/sections/careers-section/job-item";
 
 interface IJobListContainerProps {
-  jobs: IJob[];
+  jobs: IJobItem[];
+  icon: IImage;
   itemsPerPage?: number;
 }
 
-function JobListContainer({ jobs, itemsPerPage = 3 }: IJobListContainerProps) {
+function JobListContainer({
+  jobs,
+  icon,
+  itemsPerPage = 2,
+}: IJobListContainerProps) {
   const [jobPage, setJobPage] = useState(0);
   const numberOfPages = Math.ceil(jobs.length / itemsPerPage);
 
@@ -20,12 +24,8 @@ function JobListContainer({ jobs, itemsPerPage = 3 }: IJobListContainerProps) {
       <div className={styles.job_list}>
         {jobs
           .slice(jobPage * numberOfPages, (jobPage + 1) * itemsPerPage)
-          .map((job, index) => (
-            <JobItem
-              job={job}
-              key={`job-item-${index}`}
-              icon={CareersSectionContent.icon}
-            />
+          .map((jobItem, index) => (
+            <JobItem jobItem={jobItem} key={`job-item-${index}`} icon={icon} />
           ))}
       </div>
       <Pagination
