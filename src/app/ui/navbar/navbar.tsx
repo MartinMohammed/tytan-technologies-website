@@ -1,6 +1,6 @@
 // NavBar.tsx
 import React from "react";
-import styles from "@/app/ui/nav-bar/nav-bar.module.css";
+import styles from "@/app/ui/navbar/navbar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { NavbarContent } from "@/app/lib/content";

@@ -135,6 +135,6 @@ a {
 }
 
 .hover_underline:hover::after {
-  width: 120%; /* Expands the underline to 120% width on hover */
-  left: -10%; /* Adjusts left position to center the extended line */
+  width: 1100%; /* Expands the underline to 120% width on hover */
+  left: -5%; /* Adjusts left position to center the extended line */
 }
