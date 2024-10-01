@@ -153,8 +153,12 @@ export const FooterContent: IFooterContentType = {
     rightContainer: {
       // individual nav items
       footerItems: [
-        { text: "IMPRINT", href: "#" },
-        { text: "PRIVACY & LEGAL", href: "#" },
+        { text: "IMPRINT", href: "/api/imprint", target_blank: true },
+        {
+          text: "PRIVACY & LEGAL",
+          href: "/api/privacy-policy",
+          target_blank: true,
+        },
         { text: "CONTACT", href: "mailto:info@tytan-technologies.com" },
       ],
       footerSocialIcons: [

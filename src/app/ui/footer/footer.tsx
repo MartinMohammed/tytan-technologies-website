@@ -24,8 +24,13 @@ function Footer() {
     <div className={styles.right_content_container}>
       <div className={styles.footer_items}>
         {FooterContent.flexContainer.rightContainer.footerItems.map(
-          ({ text, href }, index) => (
-            <LinkItem key={`footer-item-${index}`} href={href} text={text} />
+          ({ text, href, target_blank }, index) => (
+            <LinkItem
+              key={`footer-item-${index}`}
+              href={href}
+              target_blank={target_blank}
+              text={text}
+            />
           )
         )}
       </div>

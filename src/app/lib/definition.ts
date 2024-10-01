@@ -42,9 +42,10 @@ export interface ICarouselItem {
   description?: string; // Add description for the caption
 }
 
-export interface INavItem {
+export interface ILinkItem {
   text: string;
   href: string;
+  target_blank?: boolean;
 }
 
 export interface IFooterSocialIcon extends IImage {
@@ -64,7 +65,7 @@ export interface IFlexContainerSettings {
 // --- Navbar Content Type ---
 export interface INavbarContentType {
   logo: IImage;
-  navItems: INavItem[];
+  navItems: ILinkItem[];
   burgerMenu: IImage;
 }
 
@@ -126,7 +127,7 @@ export interface IFooterLeftContainer {
 }
 
 export interface IFooterRightContainer {
-  footerItems: INavItem[];
+  footerItems: ILinkItem[];
   footerSocialIcons: IFooterSocialIcon[];
 }
 
