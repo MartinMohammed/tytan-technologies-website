@@ -1,0 +1,21 @@
+.careers_section {
+}
+
+.careers_container {
+  color: var(--text_primary);
+}
+
+.heading_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 90px;
+}
+
+.primary_heading {
+  color: var(--text_primary);
+}
+
+.sub_heading {
+  color: var(--text_secondary);
+}

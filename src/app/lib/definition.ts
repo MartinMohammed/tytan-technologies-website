@@ -48,7 +48,7 @@ export interface ILinkItem {
   target_blank?: boolean;
 }
 
-export interface IFooterSocialIcon extends IImage {
+export interface ILinkImage extends IImage {
   href: string;
 }
 
@@ -118,7 +118,21 @@ export interface ITytanInterceptor2ContentType {
 }
 
 // --- Career Section Content Type
+export interface IJob {
+  title: string;
+  department: string;
+  product: string;
+  location: string;
+  href: string;
+}
 
+export interface ICareersSectionContentType {
+  primaryHeading: string;
+  subHeading: string;
+  itemsPerPage: 2;
+  jobs: IJob[];
+  icon: ILinkImage;
+}
 // --- News Section Content Type
 
 // --- Footer ---
@@ -128,7 +142,7 @@ export interface IFooterLeftContainer {
 
 export interface IFooterRightContainer {
   footerItems: ILinkItem[];
-  footerSocialIcons: IFooterSocialIcon[];
+  footerSocialIcons: ILinkImage[];
 }
 
 export interface IFooterContentType {

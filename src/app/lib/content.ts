@@ -2,6 +2,7 @@
 
 import {
   CAROUSEL_ITEM_TYPE_ENUM,
+  ICareersSectionContentType,
   IFooterContentType,
   IHeroSectionContentType,
   IMissionSection1ContentType,
@@ -131,6 +132,41 @@ export const TytanInterceptorSection2Content: ITytanInterceptor2ContentType = {
 };
 
 // --- Careers Section ---
+export const CareersSectionContent: ICareersSectionContentType = {
+  primaryHeading: "Join Us",
+  subHeading: "We are looking for the best talent to become part of our team.",
+  itemsPerPage: 2,
+  jobs: [
+    {
+      title: "Engineering Manager",
+      department: "Product",
+      product: "Mobile App",
+      location: "Munich, Germany",
+      href: "#",
+    },
+    {
+      title: "Engineering Manager",
+      department: "Product",
+      product: "Cloud Platform",
+      location: "Munich, Germany",
+      href: "#",
+    },
+    {
+      title: "Engineering Manager",
+      department: "Product",
+      product: "AI Services",
+      location: "Munich, Germany",
+      href: "#",
+    },
+  ],
+  icon: {
+    src: "/arrow_right_icon.svg",
+    alt: "Arrow Right Icon",
+    href: "#",
+    width: 32,
+    height: 32,
+  },
+};
 
 // --- News Section ---
 
