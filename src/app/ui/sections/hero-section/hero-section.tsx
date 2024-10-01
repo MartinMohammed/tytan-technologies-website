@@ -7,12 +7,13 @@ function HeroSection() {
   return (
     <section className={styles.hero_section}>
       <div className={styles.hero_container}>
-        <Image
+        <video
           src={HeroSectionContent.video.src}
-          alt={HeroSectionContent.video.alt}
           width={HeroSectionContent.video.width}
           height={HeroSectionContent.video.height}
-          unoptimized
+          autoPlay
+          muted
+          loop
           className={styles.hero_image}
         />
         <div className={styles.text_container}>

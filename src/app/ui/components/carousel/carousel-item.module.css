@@ -1,0 +1,51 @@
+/* components/CarouselItem.module.css */
+.carousel_item {
+  position: relative; /* Allows positioning elements inside */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/* carousel-item.module.css */
+.image_container {
+  position: relative;
+  width: 100%;
+  height: 726px; /* Adjust as needed */
+}
+
+.carousel_media {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+/* Caption Styles */
+.carousel_caption {
+  position: absolute;
+  gap: 10px;
+  max-width: 650px;
+  top: 30px; /* Adjust the position as needed */
+  left: 30px; /* Adjust the position as needed */
+  display: flex;
+  flex-direction: column;
+  z-index: 10; /* Ensure it appears above the media content */
+  color: var(--text_primary); /* Text color for visibility */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Optional background for better readability */
+  padding: 15px 10px;
+  border-radius: 5px;
+}
+
+.caption_title {
+  margin: 0;
+}
+
+.caption_description {
+  margin: 0;
+}

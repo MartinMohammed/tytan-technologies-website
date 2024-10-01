@@ -2,16 +2,19 @@ import React from "react";
 import styles from "@/app/ui/sections/mission-section-1/mission-section-1.module.css";
 import { MissionSection1Content } from "@/app/lib/content";
 import FlexContainer from "@/app/ui/components/flex-container/flex-container";
-import { TEXT_STYLES } from "@/app/lib/definition";
+import { TEXT_STYLES_ENUM } from "@/app/lib/definition";
+import WrapperContainer from "@/app/ui/components/wrapper-container/wrapper-container";
 
 function MissionSection1() {
   const leftContent = (
     <div>
-      <h3 className={`${styles.sub_heading} ${TEXT_STYLES.SMALL_TEXT_STYLE}`}>
+      <h3
+        className={`${styles.sub_heading} ${TEXT_STYLES_ENUM.SMALL_TEXT_STYLE}`}
+      >
         {MissionSection1Content.flexContainer.leftContainer.subHeading}
       </h3>
       <h2
-        className={`${styles.primary_heading} ${TEXT_STYLES.MEDIUM_TEXT_STYLE}`}
+        className={`${styles.primary_heading} ${TEXT_STYLES_ENUM.MEDIUM_TEXT_STYLE}`}
       >
         {MissionSection1Content.flexContainer.leftContainer.primaryHeading}
       </h2>
@@ -25,7 +28,7 @@ function MissionSection1() {
           return (
             <p
               key={`body-part-${index}`}
-              className={`${styles.body} ${TEXT_STYLES.SMALL_TEXT_STYLE}`}
+              className={`${styles.body} ${TEXT_STYLES_ENUM.SMALL_TEXT_STYLE}`}
             >
               {bodyPart}
             </p>
@@ -37,17 +40,19 @@ function MissionSection1() {
 
   return (
     <section className={styles.mission_section_1}>
-      <FlexContainer
-        leftFlexPercentage={
-          MissionSection1Content.flexContainer.leftFlexPercentage
-        }
-        gap={MissionSection1Content.flexContainer.gap}
-        leftComponent={leftContent}
-        rightComponent={rightContent}
-        padding={MissionSection1Content.flexContainer.padding}
-        alignItems={MissionSection1Content.flexContainer.alignItems}
-        justifyContent={MissionSection1Content.flexContainer.justifyContent}
-      />
+      <WrapperContainer>
+        <FlexContainer
+          leftFlexPercentage={
+            MissionSection1Content.flexContainer.leftFlexPercentage
+          }
+          gap={MissionSection1Content.flexContainer.gap}
+          leftComponent={leftContent}
+          rightComponent={rightContent}
+          padding={MissionSection1Content.flexContainer.padding}
+          alignItems={MissionSection1Content.flexContainer.alignItems}
+          justifyContent={MissionSection1Content.flexContainer.justifyContent}
+        />
+      </WrapperContainer>
     </section>
   );
 }

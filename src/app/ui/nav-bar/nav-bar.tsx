@@ -6,6 +6,8 @@ import Link from "next/link";
 import { NavbarContent } from "@/app/lib/content";
 import LinkItem from "@/app/ui/components/link-item/link-item";
 
+const SHOW_BURGER_MENU = false;
+
 function NavBar() {
   return (
     <nav className={styles.navbar}>
@@ -30,14 +32,16 @@ function NavBar() {
             );
           })}
         </div>
-        <div className={styles.burger_menu}>
-          <Image
-            src={NavbarContent.burgerMenu.src}
-            alt={NavbarContent.burgerMenu.alt}
-            width={NavbarContent.burgerMenu.width}
-            height={NavbarContent.burgerMenu.height}
-          />
-        </div>
+        {SHOW_BURGER_MENU && (
+          <div className={styles.burger_menu}>
+            <Image
+              src={NavbarContent.burgerMenu.src}
+              alt={NavbarContent.burgerMenu.alt}
+              width={NavbarContent.burgerMenu.width}
+              height={NavbarContent.burgerMenu.height}
+            />
+          </div>
+        )}
       </div>
     </nav>
   );

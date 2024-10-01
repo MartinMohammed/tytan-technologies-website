@@ -1,0 +1,38 @@
+/* carousel-nav-item.module.css */
+
+.carousel_nav_item {
+  flex-grow: 1;
+  height: 65px;
+  background-color: var(--background_secondary); /* Default background */
+  color: var(--text_primary); /* Default text color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Add a tiny border to the right of each item except the last one */
+.carousel_nav_item:nth-child(n):not(:last-child) {
+  border-right: 1px solid var(--background_primary); /* Border color from --text_primary */
+}
+
+/* Active state */
+.active {
+  background-color: var(
+    --text_primary
+  ); /* Background becomes the primary text color */
+  color: var(
+    --background_secondary
+  ); /* Font color switches to secondary background color */
+}
+
+/* Hover effect for non-active items */
+.carousel_nav_item:not(.active):hover {
+  background-color: var(--text_primary);
+  color: var(--background_secondary);
+}
+
+.nav_label {
+  text-transform: uppercase; /* Optional: text style */
+}

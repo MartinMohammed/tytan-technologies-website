@@ -20,5 +20,21 @@
 .footer_social_icons {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 15px;
+}
+
+.footer_social_icons a {
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer_social_icons a:hover {
+  transform: scale(1.2); /* Scales the icon slightly */
+  opacity: 0.8; /* Adds some transparency */
+}
+
+.footer_social_icons img {
+  width: 100%;
+  height: auto;
 }

@@ -12,8 +12,6 @@
 }
 
 .body {
-  line-height: 1.6; /* Improves readability */
   color: var(--text_secondary); /* Adjust color based on your design system */
-  margin-bottom: 1rem; /* Resets margin for consistent spacing */
-  text-wrap: wrap;
+  margin-bottom: 10px;
 }

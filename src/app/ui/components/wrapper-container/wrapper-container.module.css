@@ -1,0 +1,7 @@
+/* margin-wrapper.module.css */
+.wrapper_container {
+  padding-top: var(--padding-top, 75px);
+  padding-bottom: var(--padding-bottom, 75px);
+  padding-left: var(--padding-left, 80px);
+  padding-right: var(--padding-right, 80px);
+}

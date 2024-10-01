@@ -4,8 +4,9 @@ import styles from "@/app/ui/footer/footer.module.css";
 import FlexContainer from "@/app/ui/components/flex-container/flex-container";
 import { FooterContent } from "@/app/lib/content";
 import Image from "next/image";
-import LinkItem from "../components/link-item/link-item";
+import LinkItem from "@/app/ui/components/link-item/link-item";
 import Link from "next/link";
+import WrapperContainer from "@/app/ui/components/wrapper-container/wrapper-container";
 
 function Footer() {
   const leftContent = (
@@ -42,15 +43,17 @@ function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <FlexContainer
-        leftFlexPercentage={FooterContent.flexContainer.leftFlexPercentage}
-        gap={FooterContent.flexContainer.gap}
-        leftComponent={leftContent}
-        rightComponent={rightContent}
-        padding={FooterContent.flexContainer.padding}
-        alignItems={FooterContent.flexContainer.alignItems}
-        justifyContent={FooterContent.flexContainer.justifyContent}
-      />
+      <WrapperContainer paddingLeft={40} paddingRight={40}>
+        <FlexContainer
+          leftFlexPercentage={FooterContent.flexContainer.leftFlexPercentage}
+          gap={FooterContent.flexContainer.gap}
+          leftComponent={leftContent}
+          rightComponent={rightContent}
+          padding={FooterContent.flexContainer.padding}
+          alignItems={FooterContent.flexContainer.alignItems}
+          justifyContent={FooterContent.flexContainer.justifyContent}
+        />
+      </WrapperContainer>
     </footer>
   );
 }

@@ -1,4 +1,17 @@
-export const NavbarContent = {
+// types.ts
+
+import {
+  CAROUSEL_ITEM_TYPE_ENUM,
+  IFooterContentType,
+  IHeroSectionContentType,
+  IMissionSection1ContentType,
+  IMissionSection2ContentType,
+  INavbarContentType,
+  ITytanInterceptor2ContentType,
+} from "@/app/lib/definition";
+
+// --- Navbar ---
+export const NavbarContent: INavbarContentType = {
   logo: {
     src: "/tytan_logo_white.svg",
     alt: "Tytan Technologies Logo",
@@ -7,7 +20,7 @@ export const NavbarContent = {
   },
   // individual nav items
   navItems: [
-    { text: "Contact", href: "#" },
+    { text: "Contact", href: "mailto:info@tytan-technologies.com" },
     { text: "Join Us", href: "#" },
   ],
   burgerMenu: {
@@ -18,10 +31,11 @@ export const NavbarContent = {
   },
 };
 
-export const HeroSectionContent = {
+// --- Hero ---
+export const HeroSectionContent: IHeroSectionContentType = {
   video: {
-    src: "/opterra_interception_bounding_box.gif",
-    alt: "Opterra interception bounding box gif.",
+    src: "/opterra_interception_bounding_box.mp4",
+    alt: "Opterra interception bounding box Video.",
     width: 1438.22,
     height: 810,
   },
@@ -29,7 +43,8 @@ export const HeroSectionContent = {
   subHeading: "TYTAN Technologies",
 };
 
-export const MissionSection1Content = {
+// --- MissionSection1 ---
+export const MissionSection1Content: IMissionSection1ContentType = {
   // Settings for <FlexContainer/>
   flexContainer: {
     leftFlexPercentage: 41.25,
@@ -51,7 +66,8 @@ export const MissionSection1Content = {
   },
 };
 
-export const MissionSection2Content = {
+// --- MissionSection2 ---
+export const MissionSection2Content: IMissionSection2ContentType = {
   // Settings for <FlexContainer/>
   flexContainer: {
     leftFlexPercentage: 41.25,
@@ -74,7 +90,55 @@ export const MissionSection2Content = {
   },
 };
 
-export const FooterContent = {
+// --- Tytan Interceptor Section 1 ---
+
+// --- Tytan Interceptor Section 2 ---
+export const TytanInterceptorSection2Content: ITytanInterceptor2ContentType = {
+  carouselItems: [
+    {
+      src: "/interception_from_target.mp4",
+      alt: "Interception from Target mp4",
+      content_type: CAROUSEL_ITEM_TYPE_ENUM.VIDEO,
+      navLabel: "Autonomous",
+      title: "Autonomous",
+      description:
+        "Employs  advanced AI for precise autonomous detection and response",
+    },
+    {
+      src: "/interception_from_target.mp4",
+      alt: "Interception from Target mp4",
+      content_type: CAROUSEL_ITEM_TYPE_ENUM.VIDEO,
+      navLabel: "Cost Effective",
+      title: "Cost-effective",
+      description:
+        "Leverages additive manufacturing to minimize production costs while being engineered for rapid deployment and seamless scalability.",
+    },
+    {
+      src: "/opterra_interception_bounding_box.mp4",
+      alt: "Opterra interception bounding box Video.",
+      content_type: CAROUSEL_ITEM_TYPE_ENUM.VIDEO,
+      navLabel: "Interoperable",
+      title: "Interoperability",
+      description: "Designed for seamless integration with existing systems",
+    },
+    {
+      src: "/opterra_interception_bounding_box.mp4",
+      alt: "Opterra interception bounding box Video.",
+      content_type: CAROUSEL_ITEM_TYPE_ENUM.VIDEO,
+      navLabel: "User proven",
+      title: "User-proven",
+      description:
+        "Developed through real user feedback, enhancing practical effectiveness.",
+    },
+  ],
+};
+
+// --- Careers Section ---
+
+// --- News Section ---
+
+// --- Footer ---
+export const FooterContent: IFooterContentType = {
   flexContainer: {
     leftFlexPercentage: 48,
     gap: 0,
@@ -94,7 +158,7 @@ export const FooterContent = {
       footerItems: [
         { text: "IMPRINT", href: "#" },
         { text: "PRIVACY & LEGAL", href: "#" },
-        { text: "CONTACT", href: "#" },
+        { text: "CONTACT", href: "mailto:info@tytan-technologies.com" },
       ],
       footerSocialIcons: [
         {
