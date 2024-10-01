@@ -1,55 +1,44 @@
 .page {
-}
-
-@media (prefers-color-scheme: dark) {
-  /* .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  } */
+  /* Default padding for larger screens */
 }
 
 .main {
-  /* On bigger screen sizes greater than 1440px width, make the page look like on 1440px screen size. */
   margin-left: auto;
   margin-right: auto;
-  max-width: 1440px;
-
-  /* display: flex;
-  flex-direction: column;
-  gap: 32px;
-  grid-row-start: 2; */
+  max-width: 1440px; /* Limit content width to 1440px by default */
 }
 
-.footer {
-  /* grid-row-start: 3;
-  display: flex;
-  gap: 24px; */
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-}
-
-@media (max-width: 600px) {
-  .page {
-    /* padding: 32px;
-    padding-bottom: 80px; */
-  }
-
+/* Large screens, for desktop sizes greater than 1440px */
+@media (min-width: 1440px) {
   .main {
-    /* align-items: center; */
-  }
-
-  .footer {
-    /* flex-wrap: wrap;
-    align-items: center;
-    justify-content: center; */
+    max-width: 1440px; /* Keep maximum width for large desktops */
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* Extra large screens, typically greater than 1440px (e.g., 4K displays) */
+@media (min-width: 1600px) {
+  .main {
+    max-width: 1600px; /* Expand the content for wider screens */
+  }
 }
+
+/* Medium screens, typically tablets in landscape and smaller desktops (between 768px to 1439px) */
+/* @media (max-width: 1439px) and (min-width: 768px) {
+  .main {
+    max-width: 90%; 
+  }
+} */
+
+/* Small screens, typically tablets in portrait mode and mobile devices in landscape (up to 768px) */
+/* @media (max-width: 767px) and (min-width: 600px) {
+  .main {
+    max-width: 95%;
+  }
+} */
+
+/* Very small screens, typically mobile devices in portrait mode (up to 600px) */
+/* @media (max-width: 599px) {
+  .main {
+    max-width: 100%;
+  }
+} */
