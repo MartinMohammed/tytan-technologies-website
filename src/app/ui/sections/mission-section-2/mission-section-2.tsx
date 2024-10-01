@@ -7,7 +7,7 @@ import WrapperContainer from "@/app/ui/components/wrapper-container/wrapper-cont
 
 function MissionSection2() {
   const leftContent = (
-    <div>
+    <div className={styles.left_content_container}>
       <h2
         className={`${styles.primary_heading} ${TEXT_STYLES_ENUM.MEDIUM_TEXT_STYLE}`}
       >
@@ -22,13 +22,13 @@ function MissionSection2() {
   );
 
   const rightContent = (
-    <div>
+    <div className={styles.right_content_container}>
       <video
         src={MissionSection2Content.flexContainer.rightContainer.video.src}
-        width={MissionSection2Content.flexContainer.rightContainer.video.width}
         autoPlay
         loop
         muted
+        className={`media_fit_container ${styles.right_content_container_media_item}`}
       />
     </div>
   );

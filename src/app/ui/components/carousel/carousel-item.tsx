@@ -39,11 +39,6 @@ interface ICarouselItemProps {
   loop?: boolean;
 }
 
-const CAROUSEL_ITEM_DIMENSIONS = {
-  height: 726,
-  width: 1280,
-};
-
 // Memoize the component to prevent unnecessary re-renders
 const CarouselItem = React.memo(
   ({
@@ -68,26 +63,23 @@ const CarouselItem = React.memo(
           <Caption title={item.title} description={item.description} />
         )}
 
-        {item.content_type === CAROUSEL_ITEM_TYPE_ENUM.IMAGE ? (
-          <div className={styles.image_container}>
+        <div className={styles.carousel_media_container}>
+          {item.content_type === CAROUSEL_ITEM_TYPE_ENUM.IMAGE ? (
             <Image
               src={item.src}
               alt={item.alt || "Carousel Image"}
-              className={styles.carousel_media}
               fill
-              objectFit="cover"
               priority // Use only if high priority is necessary
+              className={`media_fit_container ${styles.carousel_media_item}`}
             />
-          </div>
-        ) : (
-          <video
-            src={item.src}
-            className={styles.carousel_media}
-            width={CAROUSEL_ITEM_DIMENSIONS.width}
-            height={CAROUSEL_ITEM_DIMENSIONS.height}
-            {...videoControls}
-          />
-        )}
+          ) : (
+            <video
+              src={item.src}
+              {...videoControls}
+              className={`media_fit_container ${styles.carousel_media_item}`}
+            />
+          )}
+        </div>
       </div>
     );
   }

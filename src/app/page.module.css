@@ -13,6 +13,11 @@
 }
 
 .main {
+  /* On bigger screen sizes greater than 1440px width, make the page look like on 1440px screen size. */
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+
   /* display: flex;
   flex-direction: column;
   gap: 32px;

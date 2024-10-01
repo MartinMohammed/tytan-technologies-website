@@ -7,7 +7,7 @@ import WrapperContainer from "@/app/ui/components/wrapper-container/wrapper-cont
 
 function MissionSection1() {
   const leftContent = (
-    <div>
+    <div className={styles.left_content_container}>
       <h3
         className={`${styles.sub_heading} ${TEXT_STYLES_ENUM.SMALL_TEXT_STYLE}`}
       >
@@ -22,7 +22,7 @@ function MissionSection1() {
   );
 
   const rightContent = (
-    <div>
+    <div className={styles.right_content_container}>
       {MissionSection1Content.flexContainer.rightContainer.body.map(
         (bodyPart, index) => {
           return (

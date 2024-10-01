@@ -22,15 +22,15 @@ export enum CAROUSEL_ITEM_TYPE_ENUM {
 export interface IImage {
   src: string;
   alt: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
 }
 
 export interface IVideo {
   src: string;
   alt: string;
-  width: number;
-  height?: number; // Optional in case height is not provided
+  width?: number;
+  height?: number;
 }
 
 export interface ICarouselItem {

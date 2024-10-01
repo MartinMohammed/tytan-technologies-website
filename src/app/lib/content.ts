@@ -36,8 +36,6 @@ export const HeroSectionContent: IHeroSectionContentType = {
   video: {
     src: "/opterra_interception_bounding_box.mp4",
     alt: "Opterra interception bounding box Video.",
-    width: 1438.22,
-    height: 810,
   },
   primaryHeading: "Autonomy to protect.",
   subHeading: "TYTAN Technologies",
@@ -84,7 +82,6 @@ export const MissionSection2Content: IMissionSection2ContentType = {
       video: {
         src: "/tytan_anim.mp4",
         alt: "Tytan animated video for full flow of product.",
-        width: 715,
       },
     },
   },

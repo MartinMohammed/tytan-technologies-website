@@ -10,7 +10,7 @@ import WrapperContainer from "@/app/ui/components/wrapper-container/wrapper-cont
 
 function Footer() {
   const leftContent = (
-    <div>
+    <div className={styles.left_content_container}>
       <Image
         src={FooterContent.flexContainer.leftContainer.logo.src}
         width={FooterContent.flexContainer.leftContainer.logo.width}
@@ -21,7 +21,7 @@ function Footer() {
   );
 
   const rightContent = (
-    <div className={styles.footer_content_container}>
+    <div className={styles.right_content_container}>
       <div className={styles.footer_items}>
         {FooterContent.flexContainer.rightContainer.footerItems.map(
           ({ text, href }, index) => (

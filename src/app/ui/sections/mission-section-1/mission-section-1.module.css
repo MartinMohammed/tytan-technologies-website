@@ -1,6 +1,9 @@
 .mission_section_1 {
 }
 
+.left_content_container {
+}
+
 .sub_heading {
   margin-bottom: 10px; /* Space below the sub-heading */
   color: var(--text_secondary); /* Adjust color based on your design system */
@@ -14,4 +17,7 @@
 .body {
   color: var(--text_secondary); /* Adjust color based on your design system */
   margin-bottom: 10px;
+}
+
+.right_content_container {
 }

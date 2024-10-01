@@ -1,15 +1,13 @@
 .hero_section {
-  position: relative; /* Ensures positioning within this section */
 }
 
 .hero_container {
   position: relative; /* Allows absolute positioning of child elements */
+  width: 100%;
+  height: 810px; /* Constrained to height. */
 }
 
-.hero_image {
-  display: block; /* Ensures the image takes its own space */
-  width: 100%;
-  height: auto;
+.hero_media_item {
 }
 
 .text_container {

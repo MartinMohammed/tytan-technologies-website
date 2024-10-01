@@ -2,7 +2,10 @@
 .footer {
 }
 
-.footer_content_container {
+.left_content_container {
+}
+
+.right_content_container {
   width: 100%;
   display: flex;
   justify-content: center;
