@@ -23,8 +23,9 @@ export const NavbarContent: INavbarContentType = {
   },
   // individual nav items
   navItems: [
+    { text: "Join Us", href: "#careers-section" },
+    { text: "News", href: "#news-section" },
     { text: "Contact", href: "mailto:info@tytan-technologies.com" },
-    { text: "Join Us", href: "#" },
   ],
   burgerMenu: {
     src: "/burger_menu_icon.svg",
@@ -176,8 +177,7 @@ export const TytanInterceptorSection2Content: ITytanInterceptor2ContentType = {
 // --- Careers Section ---
 export const CareersSectionContent: ICareersSectionContentType = {
   primaryHeading: "Join Us",
-  subHeading:
-    "Make a lasting impact in the new era of defense! Join us to create a safer world for all.",
+  subHeading: "Make a lasting impact in the new era of defense!",
   itemsPerPage: 2,
   jobs: [
     {

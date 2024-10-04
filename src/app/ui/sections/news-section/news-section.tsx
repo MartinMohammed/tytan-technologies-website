@@ -7,7 +7,7 @@ import { TEXT_STYLES_ENUM } from "@/app/lib/definition";
 
 function NewsSection() {
   return (
-    <section className={styles.news_section}>
+    <section className={styles.news_section} id="news-section">
       <WrapperContainer>
         <div className={styles.news_container}>
           <div className={styles.heading_container}>

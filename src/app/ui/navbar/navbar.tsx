@@ -10,7 +10,7 @@ const SHOW_BURGER_MENU = false;
 
 function NavBar() {
   return (
-    <nav className={styles.navbar}>
+    <nav className={styles.navbar} id="navbar">
       {/* Flexbox container with space-between alignment */}
       <div className={styles.navbar_left}>
         <Link href={"#"}>

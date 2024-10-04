@@ -68,7 +68,10 @@ function TytanInterceptorSection1() {
   );
 
   return (
-    <section className={styles.tytan_interceptor_section_1}>
+    <section
+      className={styles.tytan_interceptor_section_1}
+      id="tytan-interceptor-section-1"
+    >
       <WrapperContainer>
         <FlexContainer
           leftFlexPercentage={

@@ -7,7 +7,7 @@ import JobListContainer from "@/app/ui/sections/careers-section/job-list-contain
 
 function CareersSection() {
   return (
-    <section className={styles.careers_section}>
+    <section className={styles.careers_section} id="careers-section">
       <WrapperContainer>
         <div className={styles.careers_container}>
           <div className={styles.heading_container}>

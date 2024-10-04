@@ -47,7 +47,7 @@ function Footer() {
   );
 
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id="footer">
       <WrapperContainer paddingLeft={40} paddingRight={40}>
         <FlexContainer
           leftFlexPercentage={FooterContent.flexContainer.leftFlexPercentage}

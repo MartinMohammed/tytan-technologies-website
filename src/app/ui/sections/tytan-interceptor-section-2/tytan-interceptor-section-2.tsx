@@ -6,7 +6,10 @@ import WrapperContainer from "@/app/ui/components/wrapper-container/wrapper-cont
 
 function TytanInterceptorSection2() {
   return (
-    <section className={styles.tytan_interceptor_section_2}>
+    <section
+      className={styles.tytan_interceptor_section_2}
+      id="tytan-interceptor-section-2"
+    >
       <WrapperContainer>
         <Carousel items={TytanInterceptorSection2Content.carouselItems} />
       </WrapperContainer>

@@ -39,7 +39,7 @@ function MissionSection1() {
   );
 
   return (
-    <section className={styles.mission_section_1}>
+    <section className={styles.mission_section_1} id="mission-section-1">
       <WrapperContainer>
         <FlexContainer
           leftFlexPercentage={
