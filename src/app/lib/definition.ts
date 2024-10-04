@@ -121,7 +121,7 @@ export interface ITytanInterceptor2ContentType {
 export interface IJobItem {
   title: string;
   department: string;
-  product: string;
+  employmentLevel: string;
   location: string;
   href: string;
 }

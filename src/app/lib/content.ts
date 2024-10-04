@@ -53,14 +53,14 @@ export const MissionSection1Content: IMissionSection1ContentType = {
     justifyContent: "left",
     padding: "75px 80px",
     leftContainer: {
-      primaryHeading: "To set the global standard in autonomous systems.",
+      primaryHeading: "The standard for cost-effective countermeasures",
       subHeading: "Our Mission",
     },
     rightContainer: {
       // individual p-items.
       body: [
-        "TYTAN Technologies is at the forefront of developing AI-driven counter-drone solutions to protect and empower democratic nations. By combining advanced technology with agile, scalable, and cost-effective systems, we address the evolving challenges of modern warfare.",
-        "Our commitment is to ensure technological sovereignty and enhance defense capabilities through relentless innovation and close collaboration with end-users.",
+        "TYTAN Technologies leads in developing AI-powered, cost-effective counter-drone solutions that strengthen democratic nations.",
+        "We tackle modern warfare challenges by combining cutting-edge technology with scalable systems.",
       ],
     },
   },
@@ -76,9 +76,9 @@ export const MissionSection2Content: IMissionSection2ContentType = {
     justifyContent: "left",
     padding: "75px 80px",
     leftContainer: {
-      primaryHeading: "Comprehensive Protection, Integrated Approach.",
+      primaryHeading: "Our Approach",
       subHeading:
-        "At TYTAN Technologies, we champion a fully integrated security approach, spanning the entire threat response spectrum. We aim to develop an ecosystem of autonomous systems delivering adaptable and scalable solutions,  enhancing overall security and operational effectiveness.",
+        "At TYTAN Technologies, we believe in a fully integrated security approach that covers the entire threat response spectrum. We intend to create an ecosystem of autonomous systems that provide adaptable and scalable solutions improving safety and operational effectiveness.",
     },
     rightContainer: {
       video: {
@@ -101,16 +101,16 @@ export const TytanInterceptorSection2Content: ITytanInterceptor2ContentType = {
       navLabel: "Autonomous",
       title: "Autonomous",
       description:
-        "Employs  advanced AI for precise autonomous detection and response",
+        "Employs advanced AI technology to deliver precise detection and rapid response capabilities for enhanced operational efficiency.",
     },
     {
       src: "/interception_from_target.mp4",
       alt: "Interception from Target mp4",
       content_type: CAROUSEL_ITEM_TYPE_ENUM.VIDEO,
-      navLabel: "Cost Effective",
+      navLabel: "Cost-Effective",
       title: "Cost-effective",
       description:
-        "Leverages additive manufacturing to minimize production costs while being engineered for rapid deployment and seamless scalability.",
+        "Utilizes innovative additive manufacturing techniques to minimize production costs while ensuring rapid deployment and seamless scalability for various applications.",
     },
     {
       src: "/opterra_interception_bounding_box.mp4",
@@ -118,16 +118,17 @@ export const TytanInterceptorSection2Content: ITytanInterceptor2ContentType = {
       content_type: CAROUSEL_ITEM_TYPE_ENUM.VIDEO,
       navLabel: "Interoperable",
       title: "Interoperability",
-      description: "Designed for seamless integration with existing systems",
+      description:
+        "Facilitates seamless integration with existing systems to enhance operational efficiency.",
     },
     {
       src: "/opterra_interception_bounding_box.mp4",
       alt: "Opterra interception bounding box Video.",
       content_type: CAROUSEL_ITEM_TYPE_ENUM.VIDEO,
-      navLabel: "User proven",
+      navLabel: "User-Proven",
       title: "User-proven",
       description:
-        "Developed through real user feedback, enhancing practical effectiveness.",
+        "Incorporates real user feedback to continuously improve practical effectiveness, reliability, and overall user experience.",
     },
   ],
 };
@@ -135,27 +136,14 @@ export const TytanInterceptorSection2Content: ITytanInterceptor2ContentType = {
 // --- Careers Section ---
 export const CareersSectionContent: ICareersSectionContentType = {
   primaryHeading: "Join Us",
-  subHeading: "We are looking for the best talent to become part of our team.",
+  subHeading:
+    "Make a lasting impact in the new era of defense! Join us to create a safer world for all.",
   itemsPerPage: 2,
   jobs: [
     {
-      title: "Engineering Manager",
-      department: "Product",
-      product: "Mobile App",
-      location: "Munich, Germany",
-      href: "#",
-    },
-    {
-      title: "Engineering Manager",
-      department: "Product",
-      product: "Cloud Platform",
-      location: "Munich, Germany",
-      href: "#",
-    },
-    {
-      title: "Engineering Manager",
-      department: "Product",
-      product: "AI Services",
+      title: "Venture Development Working Student",
+      department: "Business",
+      employmentLevel: "Part Time",
       location: "Munich, Germany",
       href: "#",
     },
@@ -242,22 +230,15 @@ export const FooterContent: IFooterContentType = {
           src: "/youtube-icon.svg",
           alt: "Youtube Icon",
           href: "#",
-          width: 42,
-          height: 42,
-        },
-        {
-          src: "/x-icon.svg",
-          alt: "X Icon",
-          href: "#",
-          width: 42,
-          height: 42,
+          width: 48,
+          height: 48,
         },
         {
           src: "/linkedIn_icon.svg",
           alt: "LinkedIn Icon",
           href: "#",
-          width: 42,
-          height: 42,
+          width: 48,
+          height: 48,
         },
       ],
     },

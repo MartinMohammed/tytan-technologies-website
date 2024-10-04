@@ -26,7 +26,7 @@ function JobItem({ jobItem, icon }: IJobItemProps) {
         <span
           className={`${TEXT_STYLES_ENUM.SMALL_TEXT_STYLE} ${styles.job_product}`}
         >
-          {jobItem.product}
+          {jobItem.employmentLevel}
         </span>
         <div className={styles.job_item_right_section}>
           <span
