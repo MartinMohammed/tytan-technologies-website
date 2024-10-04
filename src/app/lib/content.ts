@@ -9,6 +9,7 @@ import {
   IMissionSection2ContentType,
   INavbarContentType,
   INewsSectionContentType,
+  ITytanInterceptor1ContentType,
   ITytanInterceptor2ContentType,
 } from "@/app/lib/definition";
 
@@ -90,6 +91,45 @@ export const MissionSection2Content: IMissionSection2ContentType = {
 };
 
 // --- Tytan Interceptor Section 1 ---
+export const TytanInterceptorSection1Content: ITytanInterceptor1ContentType = {
+  // Settings for <FlexContainer/>
+  flexContainer: {
+    leftFlexPercentage: (4 * 100) / 7,
+    gap: 35,
+    alignItems: "center",
+    justifyContent: "left",
+    padding: "75px 80px",
+    leftContainer: {
+      image: {
+        src: "/tytan-interceptor-mockup.jpg",
+        alt: "tytan interceptor mockup",
+      },
+    },
+    rightContainer: {
+      primaryHeading: "TYTAN Interceptor",
+      subHeading:
+        "A cost-effective, AI-driven vertical take-off counter-UAS against NATO classes I-III, neutralising threats with precision through direct kinetic hit.",
+      characteristicItems: [
+        {
+          characteristic: "Range",
+          value: "15km",
+        },
+        {
+          characteristic: "Speed",
+          value: "250 km/h",
+        },
+        {
+          characteristic: "Weight",
+          value: "5 kg",
+        },
+        {
+          characteristic: "Max height",
+          value: "3000 m",
+        },
+      ],
+    },
+  },
+};
 
 // --- Tytan Interceptor Section 2 ---
 export const TytanInterceptorSection2Content: ITytanInterceptor2ContentType = {

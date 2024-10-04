@@ -9,7 +9,7 @@
 }
 
 .primary_heading {
-  margin-bottom: 35px; /* Space below the sub-heading */
+  margin-bottom: 25px; /* Space below the sub-heading */
   color: var(--text_primary); /* Adjust color based on your design system */
 }
 

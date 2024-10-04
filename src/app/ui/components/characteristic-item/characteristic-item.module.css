@@ -1,0 +1,13 @@
+.characteristic_item_row {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--text_primary); /* This adds the white line below each spec */
+}
+
+.characteristic_item_label {
+}
+
+.characteristic_item_value {
+  color: var(--text_secondary);
+}

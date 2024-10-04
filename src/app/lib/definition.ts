@@ -48,6 +48,11 @@ export interface ILinkItem {
   target_blank?: boolean;
 }
 
+export interface ICharacteristicItem {
+  characteristic: string;
+  value: string;
+}
+
 export interface ILinkImage extends IImage {
   href: string;
 }
@@ -111,6 +116,22 @@ export interface IMissionSection2ContentType {
 }
 
 // --- Tytan Interceptor 1 Section Content Type ---
+export interface ITytanInterceptorSection1LeftContainer {
+  image: IImage;
+}
+
+export interface ITytanInterceptorSection1RightContainer {
+  primaryHeading: string;
+  subHeading: string;
+  characteristicItems: ICharacteristicItem[];
+}
+
+export interface ITytanInterceptor1ContentType {
+  flexContainer: IFlexContainerSettings & {
+    leftContainer: ITytanInterceptorSection1LeftContainer;
+    rightContainer: ITytanInterceptorSection1RightContainer;
+  };
+}
 
 // --- Tytan Interceptor 2 Section Content Type ---
 export interface ITytanInterceptor2ContentType {

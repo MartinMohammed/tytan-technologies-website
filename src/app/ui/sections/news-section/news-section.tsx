@@ -11,11 +11,11 @@ function NewsSection() {
       <WrapperContainer>
         <div className={styles.news_container}>
           <div className={styles.heading_container}>
-            <h1
+            <h2
               className={`${TEXT_STYLES_ENUM.MEDIUM_TEXT_STYLE} ${styles.primary_heading}`}
             >
               {NewsSectionContent.primaryHeading}
-            </h1>
+            </h2>
           </div>
           <NewsListContainer
             itemsPerPage={NewsSectionContent.itemsPerPage}

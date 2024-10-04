@@ -15,11 +15,11 @@ interface ICaptionProps {
 const Caption: React.FC<ICaptionProps> = ({ title, description }) => (
   <div className={styles.carousel_item_caption}>
     {title && (
-      <h2
+      <h3
         className={`${styles.caption_title} ${TEXT_STYLES_ENUM.MEDIUM_TEXT_STYLE}`}
       >
         {title}
-      </h2>
+      </h3>
     )}
     {description && (
       <p

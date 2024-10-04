@@ -1,0 +1,49 @@
+.tytan_interceptor_section_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left_content_container {
+  position: relative;
+  height: 639px; /* Constrained in terms of height */
+  width: 100%;
+}
+
+.left_content_container_image_item {
+}
+
+.tytan_interceptor_image {
+}
+
+.right_content_container {
+  /* need to be adjusted on bigger screen sizes using media queries */
+  transform: translateX(-40%);
+  z-index: 1;
+  height: 639px; /* Constrained in terms of height */
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute space vertically */
+}
+
+.heading_container {
+  width: 140%; /* +compensation for the width loss due to the image overlap */
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.primary_heading {
+}
+
+.sub_heading {
+  color: var(--text_secondary);
+}
+
+.characteristics {
+  width: 75%; /* +compensation for the width loss due to the image overlap */
+  display: flex;
+  flex-direction: column;
+  gap: 26px; /* Add vertical spacing between each characteristic row */
+}

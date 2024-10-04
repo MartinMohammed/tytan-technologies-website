@@ -11,16 +11,16 @@ function CareersSection() {
       <WrapperContainer>
         <div className={styles.careers_container}>
           <div className={styles.heading_container}>
-            <h1
+            <h2
               className={`${TEXT_STYLES_ENUM.MEDIUM_TEXT_STYLE} ${styles.primary_heading}`}
             >
               {CareersSectionContent.primaryHeading}
-            </h1>
-            <p
+            </h2>
+            <h3
               className={`${TEXT_STYLES_ENUM.SMALL_TEXT_STYLE} ${styles.sub_heading}`}
             >
               {CareersSectionContent.subHeading}
-            </p>
+            </h3>
           </div>
           <JobListContainer
             jobs={CareersSectionContent.jobs}
