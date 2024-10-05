@@ -12,7 +12,10 @@ import LinkImage from "@/app/ui/components/link-image/link-image";
 function Footer() {
   const leftContent = (
     <div className={styles.left_content_container}>
-      <Link href={FooterContent.flexContainer.leftContainer.logo.href}>
+      <Link
+        href={FooterContent.flexContainer.leftContainer.logo.href}
+        className={styles.footer_logo}
+      >
         <Image
           src={FooterContent.flexContainer.leftContainer.logo.src}
           width={FooterContent.flexContainer.leftContainer.logo.width}

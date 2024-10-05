@@ -3,22 +3,17 @@
 }
 
 .main {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1440px; /* Limit content width to 1440px by default */
 }
 
 /* Large screens, for desktop sizes greater than 1440px */
 @media (min-width: 1440px) {
   .main {
-    max-width: 1440px; /* Keep maximum width for large desktops */
   }
 }
 
 /* Extra large screens, typically greater than 1440px (e.g., 4K displays) */
 @media (min-width: 1600px) {
   .main {
-    max-width: 1600px; /* Expand the content for wider screens */
   }
 }
 

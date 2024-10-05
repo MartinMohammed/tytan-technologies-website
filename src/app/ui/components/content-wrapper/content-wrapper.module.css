@@ -5,3 +5,23 @@
   padding-left: var(--padding-left, 80px);
   padding-right: var(--padding-right, 80px);
 }
+
+/* Large screens, for desktop sizes greater than 1440px */
+@media (min-width: 1440px) {
+  .content_wrapper {
+    padding-top: calc(1.1 * var(--padding-top));
+    padding-bottom: calc(1.1 * var(--padding-bottom));
+    padding-left: calc(1.3 * var(--padding-left));
+    padding-right: calc(1.3 * var(--padding-right));
+  }
+}
+
+/* Extra large screens, typically greater than 1440px (e.g., 4K displays) */
+@media (min-width: 1600px) {
+  .content_wrapper {
+    padding-top: calc(1.25 * var(--padding-top));
+    padding-bottom: calc(1.25 * var(--padding-bottom));
+    padding-left: calc(1.5 * var(--padding-left));
+    padding-right: calc(1.5 * var(--padding-right));
+  }
+}

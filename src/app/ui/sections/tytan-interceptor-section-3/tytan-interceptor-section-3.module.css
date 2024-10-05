@@ -19,3 +19,10 @@
 
 .right_content_container_image_item {
 }
+
+/* Large screens, for desktop sizes greater than 1440px */
+@media (min-width: 1440px) {
+  .right_content_container {
+    height: 955px;
+  }
+}
