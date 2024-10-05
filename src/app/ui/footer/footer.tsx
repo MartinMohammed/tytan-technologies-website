@@ -6,32 +6,21 @@ import { FooterContent } from "@/app/lib/content";
 import LinkItem from "@/app/ui/components/link-item/link-item";
 import ContentWrapper from "@/app/ui/components/content-wrapper/content-wrapper";
 import LinkImage from "@/app/ui/components/link-image/link-image";
+import { omit } from "@/app/lib/utils";
 
 function Footer() {
-  const leftContent = (
+  const leftContainer = (
     <div className={styles.left_content_container}>
-      <LinkImage
-        targetBlank={FooterContent.flexContainer.leftContainer.logo.targetBlank}
-        src={FooterContent.flexContainer.leftContainer.logo.src}
-        width={FooterContent.flexContainer.leftContainer.logo.width}
-        height={FooterContent.flexContainer.leftContainer.logo.height}
-        href={FooterContent.flexContainer.leftContainer.logo.href}
-        alt={FooterContent.flexContainer.leftContainer.logo.alt}
-      />
+      <LinkImage {...FooterContent.flexContainer.leftContainer.logo} />
     </div>
   );
 
-  const rightContent = (
+  const rightContainer = (
     <div className={styles.right_content_container}>
       <div className={styles.footer_items}>
         {FooterContent.flexContainer.rightContainer.footerItems.map(
-          ({ text, href, targetBlank }, index) => (
-            <LinkItem
-              key={`footer-item-${index}`}
-              href={href}
-              text={text}
-              targetBlank={targetBlank}
-            />
+          (linkItem, index) => (
+            <LinkItem key={`footer-item-${index}`} {...linkItem} />
           )
         )}
       </div>
@@ -50,16 +39,14 @@ function Footer() {
 
   return (
     <footer className={styles.footer} id="footer">
-      <ContentWrapper
-        paddingLeft={FooterContent.ContentWrapper.paddingLeft}
-        paddingRight={FooterContent.ContentWrapper.paddingRight}
-      >
+      <ContentWrapper {...FooterContent.ContentWrapper}>
         <FlexContainer
-          leftFlexPercentage={FooterContent.flexContainer.leftFlexPercentage}
-          gap={FooterContent.flexContainer.gap}
-          leftComponent={leftContent}
-          rightComponent={rightContent}
-          justifyContent={FooterContent.flexContainer.justifyContent}
+          leftComponent={leftContainer}
+          rightComponent={rightContainer}
+          {...omit(FooterContent.flexContainer, [
+            "leftContainer",
+            "rightContainer",
+          ])}
         />
       </ContentWrapper>
     </footer>

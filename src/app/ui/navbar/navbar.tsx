@@ -13,38 +13,19 @@ function NavBar() {
     <nav className={styles.navbar} id="navbar">
       {/* Flexbox container with space-between alignment */}
       <div className={styles.navbar_left}>
-        <LinkImage
-          targetBlank={NavbarContent.logo.targetBlank}
-          src={NavbarContent.logo.src}
-          alt={NavbarContent.logo.alt}
-          href={NavbarContent.logo.href}
-          width={NavbarContent.logo.width}
-          height={NavbarContent.logo.height}
-        />
+        <LinkImage {...NavbarContent.logo} />
       </div>
       {/* Flexbox to group nav items and burger menu */}
       <div className={styles.navbar_right}>
         {/* Container for nav items with specified gap */}
         <div className={styles.nav_items}>
-          {NavbarContent.navItems.map(({ text, href, targetBlank }, index) => {
-            return (
-              <LinkItem
-                key={`nav-item-${index}`}
-                href={href}
-                text={text}
-                targetBlank={targetBlank}
-              />
-            );
+          {NavbarContent.navItems.map((linkItem, index) => {
+            return <LinkItem key={`nav-item-${index}`} {...linkItem} />;
           })}
         </div>
         {SHOW_BURGER_MENU && (
           <div className={styles.burger_menu}>
-            <Image
-              src={NavbarContent.burgerMenu.src}
-              alt={NavbarContent.burgerMenu.alt}
-              width={NavbarContent.burgerMenu.width}
-              height={NavbarContent.burgerMenu.height}
-            />
+            <Image {...NavbarContent.burgerMenu} />
           </div>
         )}
       </div>

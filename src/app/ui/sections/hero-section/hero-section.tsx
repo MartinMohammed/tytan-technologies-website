@@ -17,17 +17,7 @@ function HeroSection() {
         />
         {/* Overlay */}
         <div className={styles.heading_group_container}>
-          <HeadingGroup
-            primaryHeading={HeroSectionContent.headingGroup.primaryHeading}
-            primaryHeadingTextStyle={
-              HeroSectionContent.headingGroup.primaryHeadingTextStyle
-            }
-            subHeading={HeroSectionContent.headingGroup.subHeading}
-            subHeadingTextColor={
-              HeroSectionContent.headingGroup.subHeadingTextColor
-            }
-            reverse={HeroSectionContent.headingGroup.reverse}
-          />
+          <HeadingGroup {...HeroSectionContent.headingGroup} />
         </div>
       </div>
     </section>

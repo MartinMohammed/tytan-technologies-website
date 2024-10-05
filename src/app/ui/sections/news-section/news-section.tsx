@@ -8,12 +8,9 @@ import HeadingGroup from "@/app/ui/components/heading-group/heading-group";
 function NewsSection() {
   return (
     <section className={styles.news_section} id="news-section">
-      <ContentWrapper>
+      <ContentWrapper {...NewsSectionContent.ContentWrapper}>
         <div className={styles.news_container}>
-          <HeadingGroup
-            primaryHeading={NewsSectionContent.headingGroup.primaryHeading}
-            marginBottom={NewsSectionContent.headingGroup.marginBottom}
-          />
+          <HeadingGroup {...NewsSectionContent.headingGroup} />
           <NewsListContainer
             itemsPerPage={NewsSectionContent.itemsPerPage}
             news={NewsSectionContent.news}

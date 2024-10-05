@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "@/app/ui/sections/news-section/news-item.module.css";
 import Image from "next/image";
-import { formatDate } from "@/app/lib/formatting"; // Helper function to format dates
+import { formatDate } from "@/app/lib/utils"; // Helper function to format dates
 import { IImage, INewsItem, TEXT_STYLES_ENUM } from "@/app/lib/definition";
 import Link from "next/link";
 
@@ -17,8 +17,7 @@ function NewsItem({ newsItem, icon }: INewsItemProps) {
       <div className={styles.news_item}>
         <div className={styles.news_item_image_container}>
           <Image
-            src={newsItem.image.src}
-            alt={newsItem.image.alt}
+            {...newsItem.image}
             fill
             className={`media_fit_container ${styles.news_item_image_item}`}
           />
@@ -35,13 +34,7 @@ function NewsItem({ newsItem, icon }: INewsItemProps) {
           >
             {newsItem.title}
           </h3>
-          <Image
-            src={icon.src}
-            alt={icon.alt}
-            width={icon.width}
-            height={icon.height}
-            className={styles.arrow}
-          />
+          <Image {...icon} className={styles.arrow} />
         </div>
       </div>
     </Link>

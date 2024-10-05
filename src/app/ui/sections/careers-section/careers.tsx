@@ -8,13 +8,9 @@ import HeadingGroup from "@/app/ui/components/heading-group/heading-group";
 function CareersSection() {
   return (
     <section className={styles.careers_section} id="careers-section">
-      <ContentWrapper>
+      <ContentWrapper {...CareersSectionContent.ContentWrapper}>
         <div className={styles.careers_container}>
-          <HeadingGroup
-            marginBottom={CareersSectionContent.headingGroup.marginBottom}
-            primaryHeading={CareersSectionContent.headingGroup.primaryHeading}
-            subHeading={CareersSectionContent.headingGroup.subHeading}
-          />
+          <HeadingGroup {...CareersSectionContent.headingGroup} />
           <JobListContainer
             jobs={CareersSectionContent.jobs}
             icon={CareersSectionContent.icon}

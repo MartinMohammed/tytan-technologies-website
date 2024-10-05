@@ -4,3 +4,13 @@
   height: var(--height, 48px);
   position: relative;
 }
+
+.hover_scale_effect {
+  display: block;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hover_scale_effect:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}

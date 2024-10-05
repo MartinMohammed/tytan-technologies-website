@@ -40,7 +40,7 @@ function CarouselItem({
   src,
   alt,
   description,
-  content_type = DEFAULT_CONSTANTS.CarouselItem.content_type,
+  contentType: contentType = DEFAULT_CONSTANTS.CarouselItem.contentType,
   controls = DEFAULT_CONSTANTS.CarouselItem.controls,
   autoPlay = DEFAULT_CONSTANTS.CarouselItem.autoPlay,
   muted = DEFAULT_CONSTANTS.CarouselItem.muted,
@@ -55,7 +55,7 @@ function CarouselItem({
       {hasCaption && <Caption title={title} description={description} />}
 
       <div className={styles.carousel_item_media_container}>
-        {content_type === MEDIA_TYPES_ENUM.IMAGE ? (
+        {contentType === MEDIA_TYPES_ENUM.IMAGE ? (
           <Image
             src={src}
             alt={alt || "Carousel Image"}

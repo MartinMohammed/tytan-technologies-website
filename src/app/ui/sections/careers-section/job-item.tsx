@@ -36,13 +36,7 @@ function JobItem({ jobItem, icon }: IJobItemProps) {
             {jobItem.location}
           </span>
 
-          <Image
-            src={icon.src}
-            alt={icon.alt}
-            width={icon.width}
-            height={icon.height}
-            className={styles.arrow}
-          />
+          <Image {...icon} className={styles.arrow} />
         </div>
       </div>
     </Link>

@@ -10,7 +10,7 @@ function TytanInterceptorSection2() {
       className={styles.tytan_interceptor_section_2}
       id="tytan-interceptor-section-2"
     >
-      <ContentWrapper>
+      <ContentWrapper {...TytanInterceptorSection2Content.ContentWrapper}>
         <Carousel items={TytanInterceptorSection2Content.carouselItems} />
       </ContentWrapper>
     </section>

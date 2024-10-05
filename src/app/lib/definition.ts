@@ -45,8 +45,8 @@ export interface ICarouselItemSettings {
 export interface ICarouselItem extends ICarouselItemSettings {
   src: string;
   alt: string;
-  content_type: MEDIA_TYPES_ENUM;
   navLabel: string;
+  contentType?: MEDIA_TYPES_ENUM;
   title?: string; // Add title for the caption
   description?: string; // Add description for the caption
 }
@@ -70,7 +70,6 @@ export interface IImage {
 
 export interface IVideo {
   src: string;
-  alt: string;
   width?: number;
   height?: number;
 }
@@ -89,6 +88,7 @@ export interface ILinkItem extends ILinkItemSettings {
 // --- Link Image ---
 export interface ILinkImageSettigs {
   targetBlank?: boolean;
+  hoverScaleEffect?: boolean;
 }
 export interface ILinkImage extends ILinkImageSettigs, IImage {
   href: string;

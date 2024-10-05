@@ -41,7 +41,7 @@ export const DEFAULT_CONSTANTS = {
     subHeadingTextColor: "var(--text_secondary)",
   },
   CarouselItem: {
-    content_type: MEDIA_TYPES_ENUM.VIDEO,
+    contentType: MEDIA_TYPES_ENUM.VIDEO,
     controls: false,
     autoPlay: true,
     muted: true,
@@ -53,6 +53,7 @@ export const DEFAULT_CONSTANTS = {
   },
   LinkImage: {
     targetBlank: true,
+    hoverScaleEffect: true,
     width: 48,
     height: 48,
   },
@@ -67,6 +68,7 @@ export const NavbarContent: INavbarContentType = {
     width: 183,
     height: 46,
     href: "#",
+    targetBlank: false,
   },
   // individual nav items
   navItems: [
@@ -87,7 +89,6 @@ export const HeroSectionContent: IHeroSectionContentType = {
   ContentWrapper: {},
   video: {
     src: "/opterra_interception_bounding_box.mp4",
-    alt: "Opterra interception bounding box Video.",
   },
   headingGroup: {
     primaryHeading: "Autonomy to protect.",
@@ -135,7 +136,6 @@ export const MissionSection2Content: IMissionSection2ContentType = {
     rightContainer: {
       video: {
         src: "/tytan_anim.mp4",
-        alt: "Tytan animated video for full flow of product.",
       },
     },
   },
@@ -191,7 +191,6 @@ export const TytanInterceptorSection2Content: ITytanInterceptorSection2ContentTy
       {
         src: "/interception_from_target.mp4",
         alt: "Interception from Target mp4",
-        content_type: MEDIA_TYPES_ENUM.VIDEO,
         navLabel: "Autonomous",
         title: "Autonomous",
         description:
@@ -200,7 +199,6 @@ export const TytanInterceptorSection2Content: ITytanInterceptorSection2ContentTy
       {
         src: "/interception_from_target.mp4",
         alt: "Interception from Target mp4",
-        content_type: MEDIA_TYPES_ENUM.VIDEO,
         navLabel: "Cost-Effective",
         title: "Cost-effective",
         description:
@@ -209,7 +207,6 @@ export const TytanInterceptorSection2Content: ITytanInterceptorSection2ContentTy
       {
         src: "/opterra_interception_bounding_box.mp4",
         alt: "Opterra interception bounding box Video.",
-        content_type: MEDIA_TYPES_ENUM.VIDEO,
         navLabel: "Interoperable",
         title: "Interoperability",
         description:
@@ -218,7 +215,6 @@ export const TytanInterceptorSection2Content: ITytanInterceptorSection2ContentTy
       {
         src: "/opterra_interception_bounding_box.mp4",
         alt: "Opterra interception bounding box Video.",
-        content_type: MEDIA_TYPES_ENUM.VIDEO,
         navLabel: "User-Proven",
         title: "User-proven",
         description:
@@ -292,7 +288,7 @@ export const NewsSectionContent: INewsSectionContentType = {
     primaryHeading: "Newsroom",
     marginBottom: 77,
   },
-  itemsPerPage: 2,
+  itemsPerPage: 3,
   news: [
     {
       date: new Date("2024-06-18"), // Correct Date object format (ISO 8601)
@@ -366,11 +362,15 @@ export const FooterContent: IFooterContentType = {
           src: "/youtube-icon.svg",
           alt: "Youtube Icon",
           href: "#navbar",
+          width: 48,
+          height: 33.76,
         },
         {
           src: "/linkedIn_icon.svg",
           alt: "LinkedIn Icon",
           href: "https://www.linkedin.com/company/tytan-technologies/",
+          width: 38,
+          height: 38,
         },
       ],
     },

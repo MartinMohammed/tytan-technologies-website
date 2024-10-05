@@ -5,32 +5,27 @@ import FlexContainer from "@/app/ui/components/flex-container/flex-container";
 import { TytanInterceptorSection3Content } from "@/app/lib/content";
 import Image from "next/image";
 import HeadingGroup from "@/app/ui/components/heading-group/heading-group";
+import { omit } from "@/app/lib/utils";
 
 function TytanInterceptorSection3() {
-  const leftContent = (
+  const leftContainer = (
     <div className={styles.left_content_container}>
       {TytanInterceptorSection3Content.flexContainer.leftContainer.headingGroups.map(
         (headingGroup, index) => {
           return (
             <HeadingGroup
               key={`tytan-interceptor-section-3-heading-group-${index}`}
-              primaryHeading={headingGroup.primaryHeading}
-              subHeading={headingGroup.subHeading}
+              {...headingGroup}
             />
           );
         }
       )}
     </div>
   );
-  const rightContent = (
+  const rightContainer = (
     <div className={styles.right_content_container}>
       <Image
-        src={
-          TytanInterceptorSection3Content.flexContainer.rightContainer.image.src
-        }
-        alt={
-          TytanInterceptorSection3Content.flexContainer.rightContainer.image.alt
-        }
+        {...TytanInterceptorSection3Content.flexContainer.rightContainer.image}
         fill
         priority
         className={`media_fit_container ${styles.right_content_container_image_item}`}
@@ -42,15 +37,14 @@ function TytanInterceptorSection3() {
       className={styles.tytan_interceptor_section_3}
       id="tytan-interceptor-section-3"
     >
-      <ContentWrapper
-        paddingBottom={
-          TytanInterceptorSection3Content.ContentWrapper.paddingBottom
-        }
-        paddingTop={TytanInterceptorSection3Content.ContentWrapper.paddingTop}
-      >
+      <ContentWrapper {...TytanInterceptorSection3Content.ContentWrapper}>
         <FlexContainer
-          leftComponent={leftContent}
-          rightComponent={rightContent}
+          {...omit(TytanInterceptorSection3Content.flexContainer, [
+            "leftContainer",
+            "rightContainer",
+          ])}
+          leftComponent={leftContainer}
+          rightComponent={rightContainer}
         />
       </ContentWrapper>
     </section>

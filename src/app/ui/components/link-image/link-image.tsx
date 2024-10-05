@@ -14,6 +14,7 @@ function LinkImage({
   targetBlank = DEFAULT_CONSTANTS.LinkImage.targetBlank,
   width = DEFAULT_CONSTANTS.LinkImage.width,
   height = DEFAULT_CONSTANTS.LinkImage.height,
+  hoverScaleEffect = DEFAULT_CONSTANTS.LinkImage.hoverScaleEffect,
 }: ILinkImageProps) {
   const linkStyle: CSSProperties = {
     "--width": `${width}px`,
@@ -24,7 +25,9 @@ function LinkImage({
     <Link
       href={href}
       target={targetBlank ? "_blank" : "_self"}
-      className={styles.link}
+      className={`${styles.link} ${
+        hoverScaleEffect ? styles.hover_scale_effect : ""
+      }`}
       style={linkStyle}
     >
       <Image src={src} alt={alt} fill className="media_fit_container" />

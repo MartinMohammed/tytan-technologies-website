@@ -4,24 +4,18 @@ import { MissionSection2Content } from "@/app/lib/content";
 import FlexContainer from "@/app/ui/components/flex-container/flex-container";
 import ContentWrapper from "@/app/ui/components/content-wrapper/content-wrapper";
 import HeadingGroup from "@/app/ui/components/heading-group/heading-group";
+import { omit } from "@/app/lib/utils";
 
 function MissionSection2() {
-  const leftContent = (
+  const leftContainer = (
     <div className={styles.left_content_container}>
       <HeadingGroup
-        primaryHeading={
-          MissionSection2Content.flexContainer.leftContainer.headingGroup
-            .primaryHeading
-        }
-        subHeading={
-          MissionSection2Content.flexContainer.leftContainer.headingGroup
-            .subHeading
-        }
+        {...MissionSection2Content.flexContainer.leftContainer.headingGroup}
       />
     </div>
   );
 
-  const rightContent = (
+  const rightContainer = (
     <div className={styles.right_content_container}>
       <video
         src={MissionSection2Content.flexContainer.rightContainer.video.src}
@@ -35,13 +29,14 @@ function MissionSection2() {
 
   return (
     <section className={styles.mission_section_2} id="mission-section-2">
-      <ContentWrapper>
+      <ContentWrapper {...MissionSection2Content.ContentWrapper}>
         <FlexContainer
-          leftFlexPercentage={
-            MissionSection2Content.flexContainer.leftFlexPercentage
-          }
-          leftComponent={leftContent}
-          rightComponent={rightContent}
+          {...omit(MissionSection2Content.flexContainer, [
+            "leftContainer",
+            "rightContainer",
+          ])}
+          leftComponent={leftContainer}
+          rightComponent={rightContainer}
         />
       </ContentWrapper>
     </section>

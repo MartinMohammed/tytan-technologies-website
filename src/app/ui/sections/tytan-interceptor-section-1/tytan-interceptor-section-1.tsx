@@ -6,17 +6,13 @@ import { TytanInterceptorSection1Content } from "@/app/lib/content";
 import CharacteristicItem from "@/app/ui/components/characteristic-item/characteristic-item";
 import FlexContainer from "@/app/ui/components/flex-container/flex-container";
 import HeadingGroup from "@/app/ui/components/heading-group/heading-group";
+import { omit } from "@/app/lib/utils";
 
 function TytanInterceptorSection1() {
-  const leftContent = (
+  const leftContainer = (
     <div className={styles.left_content_container}>
       <Image
-        src={
-          TytanInterceptorSection1Content.flexContainer.leftContainer.image.src
-        }
-        alt={
-          TytanInterceptorSection1Content.flexContainer.leftContainer.image.alt
-        }
+        {...TytanInterceptorSection1Content.flexContainer.leftContainer.image}
         fill
         priority
         className={`media_fit_container ${styles.left_content_container_image_item}`}
@@ -27,21 +23,11 @@ function TytanInterceptorSection1() {
   {
     /* Right-hand side with the description */
   }
-  const rightContent = (
+  const rightContainer = (
     <div className={styles.right_content_container}>
       <HeadingGroup
-        widthPct={
-          TytanInterceptorSection1Content.flexContainer.rightContainer
-            .headingGroup.widthPct
-        }
-        primaryHeading={
-          TytanInterceptorSection1Content.flexContainer.rightContainer
-            .headingGroup.primaryHeading
-        }
-        subHeading={
-          TytanInterceptorSection1Content.flexContainer.rightContainer
-            .headingGroup.subHeading
-        }
+        {...TytanInterceptorSection1Content.flexContainer.rightContainer
+          .headingGroup}
       />
 
       {/* Specifications */}
@@ -65,13 +51,14 @@ function TytanInterceptorSection1() {
       className={styles.tytan_interceptor_section_1}
       id="tytan-interceptor-section-1"
     >
-      <ContentWrapper>
+      <ContentWrapper {...TytanInterceptorSection1Content.ContentWrapper}>
         <FlexContainer
-          leftFlexPercentage={
-            TytanInterceptorSection1Content.flexContainer.leftFlexPercentage
-          }
-          leftComponent={leftContent}
-          rightComponent={rightContent}
+          {...omit(TytanInterceptorSection1Content.flexContainer, [
+            "leftContainer",
+            "rightContainer",
+          ])}
+          leftComponent={leftContainer}
+          rightComponent={rightContainer}
         />
       </ContentWrapper>
     </section>
