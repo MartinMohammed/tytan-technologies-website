@@ -54,8 +54,8 @@ export const DEFAULT_CONSTANTS = {
   LinkImage: {
     targetBlank: true,
     hoverScaleEffect: true,
-    width: 48,
-    height: 48,
+    width: 42,
+    height: 42,
   },
 };
 
@@ -114,8 +114,8 @@ export const MissionSection1Content: IMissionSection1ContentType = {
     rightContainerContent: {
       // individual p-items.
       body: [
-        "TYTAN Technologies leads in developing AI-powered, cost-effective counter-drone solutions that strengthen democratic nations.",
-        "We tackle modern warfare challenges by combining cutting-edge technology with scalable systems.",
+        "TYTAN Technologies is a leader in developing AI-powered, cost-effective counter drone solutions to protect people and critical infrastructure.",
+        "We address modern defense challenges by combining cutting-edge technology with scalable systems to strengthen democratic nations.",
       ],
     },
   },
@@ -158,7 +158,7 @@ export const TytanInterceptorSection1Content: ITytanInterceptorSection1ContentTy
         headingGroup: {
           primaryHeading: "TYTAN Interceptor",
           subHeading:
-            "A cost-effective, AI-driven vertical take-off counter-UAS against NATO classes I-III, neutralising threats with precision through direct kinetic hit.",
+            "A high-speed autonomous interceptor that minimizes the cost per engagement against Class II threats.",
           widthPct: 140,
         },
         characteristicItems: [
@@ -194,7 +194,7 @@ export const TytanInterceptorSection2Content: ITytanInterceptorSection2ContentTy
         navLabel: "Autonomous",
         title: "Autonomous",
         description:
-          "Employs advanced AI technology to deliver precise detection and rapid response capabilities for enhanced operational efficiency.",
+          "Advanced AI for precise detection and response, while operators stay in control of critical decisions.",
       },
       {
         src: "/interception_from_target.mp4",
@@ -202,7 +202,7 @@ export const TytanInterceptorSection2Content: ITytanInterceptorSection2ContentTy
         navLabel: "Cost-Effective",
         title: "Cost-effective",
         description:
-          "Utilizes innovative additive manufacturing techniques to minimize production costs while ensuring rapid deployment and seamless scalability for various applications.",
+          "Additive manufacturing and modularity ensure scalability and adaptability to meet changing operational needs.",
       },
       {
         src: "/opterra_interception_bounding_box.mp4",
@@ -210,15 +210,14 @@ export const TytanInterceptorSection2Content: ITytanInterceptorSection2ContentTy
         navLabel: "Interoperable",
         title: "Interoperability",
         description:
-          "Facilitates seamless integration with existing systems to enhance operational efficiency.",
+          "Seamless integration with existing digital infrastructure to maximize efficiency.",
       },
       {
         src: "/opterra_interception_bounding_box.mp4",
         alt: "Opterra interception bounding box Video.",
         navLabel: "User-Proven",
         title: "User-proven",
-        description:
-          "Incorporates real user feedback to continuously improve practical effectiveness, reliability, and overall user experience.",
+        description: "Forged by user feedback to address real-world problems.",
       },
     ],
   };
@@ -237,7 +236,7 @@ export const TytanInterceptorSection3Content: ITytanInterceptorSection3ContentTy
           {
             primaryHeading: "Autonomous Interceptor",
             subHeading:
-              "TYTAN interceptor is launched launched within seconds and flies towards the adversary drone's location. Utilizing computer vision for detection, it effectively neutralizes the adversary drone through a direct kinetic hit.",
+              "TYTAN interceptor is launched within seconds and flies towards the adversary drone's location. Utilizing computer vision for detection, it effectively neutralizes the adversary drone through a direct kinetic hit.",
           },
           {
             primaryHeading: "Automated Launcher",
@@ -362,15 +361,12 @@ export const FooterContent: IFooterContentType = {
           src: "/youtube-icon.svg",
           alt: "Youtube Icon",
           href: "#navbar",
-          width: 48,
-          height: 33.76,
+          height: 29.54,
         },
         {
           src: "/linkedIn_icon.svg",
           alt: "LinkedIn Icon",
           href: "https://www.linkedin.com/company/tytan-technologies/",
-          width: 38,
-          height: 38,
         },
       ],
     },
