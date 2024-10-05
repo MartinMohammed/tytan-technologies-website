@@ -2,22 +2,22 @@ import React from "react";
 import styles from "@/app/ui/sections/mission-section-2/mission-section-2.module.css";
 import { MissionSection2Content } from "@/app/lib/content";
 import FlexContainer from "@/app/ui/components/flex-container/flex-container";
-import { TEXT_STYLES_ENUM } from "@/app/lib/definition";
 import WrapperContainer from "@/app/ui/components/wrapper-container/wrapper-container";
+import HeadingGroup from "@/app/ui/components/heading-group/heading-group";
 
 function MissionSection2() {
   const leftContent = (
     <div className={styles.left_content_container}>
-      <h2
-        className={`${styles.primary_heading} ${TEXT_STYLES_ENUM.MEDIUM_TEXT_STYLE}`}
-      >
-        {MissionSection2Content.flexContainer.leftContainer.primaryHeading}
-      </h2>
-      <h3
-        className={`${styles.sub_heading} ${TEXT_STYLES_ENUM.SMALL_TEXT_STYLE}`}
-      >
-        {MissionSection2Content.flexContainer.leftContainer.subHeading}
-      </h3>
+      <HeadingGroup
+        primaryHeading={
+          MissionSection2Content.flexContainer.leftContainer.headingGroup
+            .primaryHeading
+        }
+        subHeading={
+          MissionSection2Content.flexContainer.leftContainer.headingGroup
+            .subHeading
+        }
+      />
     </div>
   );
 

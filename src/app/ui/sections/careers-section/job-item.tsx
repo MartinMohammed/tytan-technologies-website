@@ -9,6 +9,7 @@ interface IJobItemProps {
   icon: IImage;
 }
 
+// Generalize it as component like "ListItem"
 function JobItem({ jobItem, icon }: IJobItemProps) {
   return (
     <Link href={jobItem.href} target="_blank">

@@ -2,15 +2,12 @@ import React from "react";
 import styles from "@/app/ui/sections/tytan-interceptor-section-1/tytan-interceptor-section-1.module.css";
 import Image from "next/image";
 import WrapperContainer from "@/app/ui/components/wrapper-container/wrapper-container";
-import { TEXT_STYLES_ENUM } from "@/app/lib/definition";
 import { TytanInterceptorSection1Content } from "@/app/lib/content";
 import CharacteristicItem from "@/app/ui/components/characteristic-item/characteristic-item";
 import FlexContainer from "@/app/ui/components/flex-container/flex-container";
+import HeadingGroup from "@/app/ui/components/heading-group/heading-group";
 
 function TytanInterceptorSection1() {
-  {
-    /* Left-hand side with the image */
-  }
   const leftContent = (
     <div className={styles.left_content_container}>
       <Image
@@ -32,24 +29,17 @@ function TytanInterceptorSection1() {
   }
   const rightContent = (
     <div className={styles.right_content_container}>
-      <div className={styles.heading_container}>
-        <h2
-          className={`${TEXT_STYLES_ENUM.MEDIUM_TEXT_STYLE} ${styles.primary_heading}`}
-        >
-          {
-            TytanInterceptorSection1Content.flexContainer.rightContainer
-              .primaryHeading
-          }
-        </h2>
-        <h3
-          className={`${TEXT_STYLES_ENUM.SMALL_TEXT_STYLE} ${styles.sub_heading}`}
-        >
-          {
-            TytanInterceptorSection1Content.flexContainer.rightContainer
-              .subHeading
-          }
-        </h3>
-      </div>
+      <HeadingGroup
+        widthPct={140}
+        primaryHeading={
+          TytanInterceptorSection1Content.flexContainer.rightContainer
+            .headingGroup.primaryHeading
+        }
+        subHeading={
+          TytanInterceptorSection1Content.flexContainer.rightContainer
+            .headingGroup.subHeading
+        }
+      />
 
       {/* Specifications */}
       <div className={styles.characteristics}>

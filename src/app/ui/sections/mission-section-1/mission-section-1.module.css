@@ -4,16 +4,6 @@
 .left_content_container {
 }
 
-.sub_heading {
-  margin-bottom: 10px; /* Space below the sub-heading */
-  color: var(--text_secondary); /* Adjust color based on your design system */
-}
-
-.primary_heading {
-  margin: 0; /* Resets margin to maintain alignment */
-  color: var(--text_primary); /* Adjust color based on your design system */
-}
-
 .body {
   color: var(--text_secondary); /* Adjust color based on your design system */
   margin-bottom: 10px;

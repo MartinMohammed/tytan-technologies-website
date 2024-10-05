@@ -1,0 +1,14 @@
+.heading_group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap, 0px); /* The gap is set via a CSS variable */
+  width: var(--width, 100%);
+  margin-top: var(--margin-top, 0px);
+  margin-bottom: var(--margin-bottom, 0px);
+}
+
+.primary_heading {
+}
+
+.sub_heading {
+}

@@ -1,0 +1,21 @@
+.tytan_interceptor_section_3 {
+}
+
+.left_content_container {
+}
+
+.left_content_container div:first-child {
+  margin-bottom: 25%;
+}
+
+.tytan_interceptor_image {
+}
+
+.right_content_container {
+  position: relative;
+  height: 818px; /* Constrained in terms of height */
+  width: 100%;
+}
+
+.right_content_container_image_item {
+}

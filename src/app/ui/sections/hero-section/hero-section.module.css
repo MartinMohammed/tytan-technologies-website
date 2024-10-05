@@ -10,21 +10,8 @@
 .hero_media_item {
 }
 
-.text_container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-
+.heading_group_container {
   position: absolute; /* Allows precise positioning */
   left: 38px; /* Positions 38px from the left of the container */
   bottom: 103px; /* Positions 103px up from the bottom of the container */
-  color: var(--text_primary); /* Adjust based on design needs */
-}
-
-.sub_heading {
-  margin: 0;
-}
-
-.primary_heading {
-  margin: 0;
 }

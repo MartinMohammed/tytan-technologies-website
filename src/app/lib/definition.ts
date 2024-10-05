@@ -66,6 +66,11 @@ export interface IFlexContainerSettings {
   padding: string;
 }
 
+export interface IHeadingGroup {
+  primaryHeading: string;
+  subHeading?: string;
+}
+
 // --- Content Interfaces ---
 // --- Navbar Content Type ---
 export interface INavbarContentType {
@@ -76,15 +81,13 @@ export interface INavbarContentType {
 
 // --- Hero Section Content Type ---
 export interface IHeroSectionContentType {
+  headingGroup: IHeadingGroup;
   video: IVideo;
-  primaryHeading: string;
-  subHeading: string;
 }
 
 // --- Mission Section 1 Content Type ---
 export interface IMissionSection1LeftContainer {
-  primaryHeading: string;
-  subHeading: string;
+  headingGroup: IHeadingGroup;
 }
 
 export interface IMissionSection1RightContainer {
@@ -100,8 +103,7 @@ export interface IMissionSection1ContentType {
 
 // --- Mission Section 2 Content Type ---
 export interface IMissionSection2LeftContainer {
-  primaryHeading: string;
-  subHeading: string;
+  headingGroup: IHeadingGroup;
 }
 
 export interface IMissionSection2RightContainer {
@@ -121,9 +123,30 @@ export interface ITytanInterceptorSection1LeftContainer {
 }
 
 export interface ITytanInterceptorSection1RightContainer {
-  primaryHeading: string;
-  subHeading: string;
+  headingGroup: IHeadingGroup;
   characteristicItems: ICharacteristicItem[];
+}
+
+export interface ITytanInterceptorSection1ContentType {
+  flexContainer: IFlexContainerSettings & {
+    leftContainer: ITytanInterceptorSection1LeftContainer;
+    rightContainer: ITytanInterceptorSection1RightContainer;
+  };
+}
+
+// --- Tytan Interceptor 2 Section Content Type ---
+export interface ITytanInterceptorSection2ContentType {
+  carouselItems: ICarouselItem[];
+}
+
+// --- Tytan Interceptor 3 Section Content Type ---
+
+export interface ITytanInterceptorSection3LeftContainer {
+  headingGroups: IHeadingGroup[];
+}
+
+export interface ITytanInterceptorSection3RightContainer {
+  image: IImage;
 }
 
 export interface ITytanInterceptor1ContentType {
@@ -133,9 +156,11 @@ export interface ITytanInterceptor1ContentType {
   };
 }
 
-// --- Tytan Interceptor 2 Section Content Type ---
-export interface ITytanInterceptor2ContentType {
-  carouselItems: ICarouselItem[];
+export interface ITytanInterceptorSection3ContentType {
+  flexContainer: IFlexContainerSettings & {
+    leftContainer: ITytanInterceptorSection3LeftContainer;
+    rightContainer: ITytanInterceptorSection3RightContainer;
+  };
 }
 
 // --- Career Section Content Type
@@ -148,15 +173,14 @@ export interface IJobItem {
 }
 
 export interface ICareersSectionContentType {
-  primaryHeading: string;
-  subHeading: string;
+  headingGroup: IHeadingGroup;
   itemsPerPage: number;
   jobs: IJobItem[];
   icon: IImage;
 }
 // --- News Section Content Type
 export interface INewsSectionContentType {
-  primaryHeading: string;
+  headingGroup: IHeadingGroup;
   itemsPerPage: number;
   news: INewsItem[];
   icon: IImage;

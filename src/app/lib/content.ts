@@ -9,8 +9,9 @@ import {
   IMissionSection2ContentType,
   INavbarContentType,
   INewsSectionContentType,
-  ITytanInterceptor1ContentType,
-  ITytanInterceptor2ContentType,
+  ITytanInterceptorSection1ContentType,
+  ITytanInterceptorSection2ContentType,
+  ITytanInterceptorSection3ContentType,
 } from "@/app/lib/definition";
 
 // --- Navbar ---
@@ -41,8 +42,10 @@ export const HeroSectionContent: IHeroSectionContentType = {
     src: "/opterra_interception_bounding_box.mp4",
     alt: "Opterra interception bounding box Video.",
   },
-  primaryHeading: "Autonomy to protect.",
-  subHeading: "TYTAN Technologies",
+  headingGroup: {
+    primaryHeading: "Autonomy to protect.",
+    subHeading: "TYTAN Technologies",
+  },
 };
 
 // --- MissionSection1 ---
@@ -55,8 +58,10 @@ export const MissionSection1Content: IMissionSection1ContentType = {
     justifyContent: "left",
     padding: "75px 80px",
     leftContainer: {
-      primaryHeading: "The standard for cost-effective countermeasures",
-      subHeading: "Our Mission",
+      headingGroup: {
+        primaryHeading: "The standard for cost-effective countermeasures",
+        subHeading: "Our Mission",
+      },
     },
     rightContainer: {
       // individual p-items.
@@ -78,9 +83,11 @@ export const MissionSection2Content: IMissionSection2ContentType = {
     justifyContent: "left",
     padding: "75px 80px",
     leftContainer: {
-      primaryHeading: "Our Approach",
-      subHeading:
-        "At TYTAN Technologies, we believe in a fully integrated security approach that covers the entire threat response spectrum. We intend to create an ecosystem of autonomous systems that provide adaptable and scalable solutions improving safety and operational effectiveness.",
+      headingGroup: {
+        primaryHeading: "Our Approach",
+        subHeading:
+          "At TYTAN Technologies, we believe in a fully integrated security approach that covers the entire threat response spectrum. We intend to create an ecosystem of autonomous systems that provide adaptable and scalable solutions improving safety and operational effectiveness.",
+      },
     },
     rightContainer: {
       video: {
@@ -92,92 +99,131 @@ export const MissionSection2Content: IMissionSection2ContentType = {
 };
 
 // --- Tytan Interceptor Section 1 ---
-export const TytanInterceptorSection1Content: ITytanInterceptor1ContentType = {
-  // Settings for <FlexContainer/>
-  flexContainer: {
-    leftFlexPercentage: (4 * 100) / 7,
-    gap: 35,
-    alignItems: "center",
-    justifyContent: "left",
-    padding: "75px 80px",
-    leftContainer: {
-      image: {
-        src: "/tytan-interceptor-mockup.jpg",
-        alt: "tytan interceptor mockup",
+export const TytanInterceptorSection1Content: ITytanInterceptorSection1ContentType =
+  {
+    // Settings for <FlexContainer/>
+    flexContainer: {
+      leftFlexPercentage: (4 * 100) / 7,
+      gap: 35,
+      alignItems: "center",
+      justifyContent: "left",
+      padding: "75px 80px",
+      leftContainer: {
+        image: {
+          src: "/tytan-interceptor-mockup.jpg",
+          alt: "tytan interceptor mockup",
+        },
+      },
+      rightContainer: {
+        headingGroup: {
+          primaryHeading: "TYTAN Interceptor",
+          subHeading:
+            "A cost-effective, AI-driven vertical take-off counter-UAS against NATO classes I-III, neutralising threats with precision through direct kinetic hit.",
+        },
+        characteristicItems: [
+          {
+            characteristic: "Range",
+            value: "15km",
+          },
+          {
+            characteristic: "Speed",
+            value: "250 km/h",
+          },
+          {
+            characteristic: "Weight",
+            value: "5 kg",
+          },
+          {
+            characteristic: "Max height",
+            value: "3000 m",
+          },
+        ],
       },
     },
-    rightContainer: {
-      primaryHeading: "TYTAN Interceptor",
-      subHeading:
-        "A cost-effective, AI-driven vertical take-off counter-UAS against NATO classes I-III, neutralising threats with precision through direct kinetic hit.",
-      characteristicItems: [
-        {
-          characteristic: "Range",
-          value: "15km",
-        },
-        {
-          characteristic: "Speed",
-          value: "250 km/h",
-        },
-        {
-          characteristic: "Weight",
-          value: "5 kg",
-        },
-        {
-          characteristic: "Max height",
-          value: "3000 m",
-        },
-      ],
-    },
-  },
-};
+  };
 
 // --- Tytan Interceptor Section 2 ---
-export const TytanInterceptorSection2Content: ITytanInterceptor2ContentType = {
-  carouselItems: [
-    {
-      src: "/interception_from_target.mp4",
-      alt: "Interception from Target mp4",
-      content_type: CAROUSEL_ITEM_TYPE_ENUM.VIDEO,
-      navLabel: "Autonomous",
-      title: "Autonomous",
-      description:
-        "Employs advanced AI technology to deliver precise detection and rapid response capabilities for enhanced operational efficiency.",
+export const TytanInterceptorSection2Content: ITytanInterceptorSection2ContentType =
+  {
+    carouselItems: [
+      {
+        src: "/interception_from_target.mp4",
+        alt: "Interception from Target mp4",
+        content_type: CAROUSEL_ITEM_TYPE_ENUM.VIDEO,
+        navLabel: "Autonomous",
+        title: "Autonomous",
+        description:
+          "Employs advanced AI technology to deliver precise detection and rapid response capabilities for enhanced operational efficiency.",
+      },
+      {
+        src: "/interception_from_target.mp4",
+        alt: "Interception from Target mp4",
+        content_type: CAROUSEL_ITEM_TYPE_ENUM.VIDEO,
+        navLabel: "Cost-Effective",
+        title: "Cost-effective",
+        description:
+          "Utilizes innovative additive manufacturing techniques to minimize production costs while ensuring rapid deployment and seamless scalability for various applications.",
+      },
+      {
+        src: "/opterra_interception_bounding_box.mp4",
+        alt: "Opterra interception bounding box Video.",
+        content_type: CAROUSEL_ITEM_TYPE_ENUM.VIDEO,
+        navLabel: "Interoperable",
+        title: "Interoperability",
+        description:
+          "Facilitates seamless integration with existing systems to enhance operational efficiency.",
+      },
+      {
+        src: "/opterra_interception_bounding_box.mp4",
+        alt: "Opterra interception bounding box Video.",
+        content_type: CAROUSEL_ITEM_TYPE_ENUM.VIDEO,
+        navLabel: "User-Proven",
+        title: "User-proven",
+        description:
+          "Incorporates real user feedback to continuously improve practical effectiveness, reliability, and overall user experience.",
+      },
+    ],
+  };
+
+// --- Tytan Interceptor Section 1 ---
+export const TytanInterceptorSection3Content: ITytanInterceptorSection3ContentType =
+  {
+    // Settings for <FlexContainer/>
+    flexContainer: {
+      leftFlexPercentage: 41.25,
+      gap: 35,
+      alignItems: "center",
+      justifyContent: "left",
+      padding: "75px 80px",
+      leftContainer: {
+        headingGroups: [
+          {
+            primaryHeading: "Autonomous Interceptor",
+            subHeading:
+              "TYTAN interceptor is launched launched within seconds and flies towards the adversary drone's location. Utilizing computer vision for detection, it effectively neutralizes the adversary drone through a direct kinetic hit.",
+          },
+          {
+            primaryHeading: "Automated Launcher",
+            subHeading:
+              "Automated Launcher for improved logistics, connectivity, and protection. With integrated health monitoring, it ensures rapid deployment.",
+          },
+        ],
+      },
+      rightContainer: {
+        image: {
+          src: "/tytan-technologies-intereceptor-illustration.png",
+          alt: "Tytan Technologies Interceptor Illustration",
+        },
+      },
     },
-    {
-      src: "/interception_from_target.mp4",
-      alt: "Interception from Target mp4",
-      content_type: CAROUSEL_ITEM_TYPE_ENUM.VIDEO,
-      navLabel: "Cost-Effective",
-      title: "Cost-effective",
-      description:
-        "Utilizes innovative additive manufacturing techniques to minimize production costs while ensuring rapid deployment and seamless scalability for various applications.",
-    },
-    {
-      src: "/opterra_interception_bounding_box.mp4",
-      alt: "Opterra interception bounding box Video.",
-      content_type: CAROUSEL_ITEM_TYPE_ENUM.VIDEO,
-      navLabel: "Interoperable",
-      title: "Interoperability",
-      description:
-        "Facilitates seamless integration with existing systems to enhance operational efficiency.",
-    },
-    {
-      src: "/opterra_interception_bounding_box.mp4",
-      alt: "Opterra interception bounding box Video.",
-      content_type: CAROUSEL_ITEM_TYPE_ENUM.VIDEO,
-      navLabel: "User-Proven",
-      title: "User-proven",
-      description:
-        "Incorporates real user feedback to continuously improve practical effectiveness, reliability, and overall user experience.",
-    },
-  ],
-};
+  };
 
 // --- Careers Section ---
 export const CareersSectionContent: ICareersSectionContentType = {
-  primaryHeading: "Join Us",
-  subHeading: "Make a lasting impact in the new era of defense!",
+  headingGroup: {
+    primaryHeading: "Join Us",
+    subHeading: "Make a lasting impact in the new era of defense!",
+  },
   itemsPerPage: 2,
   jobs: [
     {
@@ -198,7 +244,9 @@ export const CareersSectionContent: ICareersSectionContentType = {
 
 // --- News Section ---
 export const NewsSectionContent: INewsSectionContentType = {
-  primaryHeading: "Newsroom",
+  headingGroup: {
+    primaryHeading: "Newsroom",
+  },
   itemsPerPage: 3,
   news: [
     {

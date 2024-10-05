@@ -12,9 +12,6 @@ interface ICarouselProps {
 
 function Carousel({ items }: ICarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
-  useEffect(() => {
-    console.log(activeIndex);
-  });
 
   return (
     <div className={styles.carousel_container}>

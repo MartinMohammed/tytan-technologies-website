@@ -4,20 +4,22 @@ import { MissionSection1Content } from "@/app/lib/content";
 import FlexContainer from "@/app/ui/components/flex-container/flex-container";
 import { TEXT_STYLES_ENUM } from "@/app/lib/definition";
 import WrapperContainer from "@/app/ui/components/wrapper-container/wrapper-container";
+import HeadingGroup from "@/app/ui/components/heading-group/heading-group";
 
 function MissionSection1() {
   const leftContent = (
     <div className={styles.left_content_container}>
-      <h3
-        className={`${styles.sub_heading} ${TEXT_STYLES_ENUM.SMALL_TEXT_STYLE}`}
-      >
-        {MissionSection1Content.flexContainer.leftContainer.subHeading}
-      </h3>
-      <h2
-        className={`${styles.primary_heading} ${TEXT_STYLES_ENUM.MEDIUM_TEXT_STYLE}`}
-      >
-        {MissionSection1Content.flexContainer.leftContainer.primaryHeading}
-      </h2>
+      <HeadingGroup
+        reverse={true}
+        primaryHeading={
+          MissionSection1Content.flexContainer.leftContainer.headingGroup
+            .primaryHeading
+        }
+        subHeading={
+          MissionSection1Content.flexContainer.leftContainer.headingGroup
+            .subHeading
+        }
+      />
     </div>
   );
 
