@@ -11,12 +11,14 @@ import WrapperContainer from "@/app/ui/components/wrapper-container/wrapper-cont
 function Footer() {
   const leftContent = (
     <div className={styles.left_content_container}>
-      <Image
-        src={FooterContent.flexContainer.leftContainer.logo.src}
-        width={FooterContent.flexContainer.leftContainer.logo.width}
-        height={FooterContent.flexContainer.leftContainer.logo.height}
-        alt={FooterContent.flexContainer.leftContainer.logo.alt}
-      />
+      <Link href={FooterContent.flexContainer.leftContainer.logo.href}>
+        <Image
+          src={FooterContent.flexContainer.leftContainer.logo.src}
+          width={FooterContent.flexContainer.leftContainer.logo.width}
+          height={FooterContent.flexContainer.leftContainer.logo.height}
+          alt={FooterContent.flexContainer.leftContainer.logo.alt}
+        />
+      </Link>
     </div>
   );
 

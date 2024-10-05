@@ -252,6 +252,7 @@ export const FooterContent: IFooterContentType = {
         alt: "Tytan Technologies Logo",
         width: 205.14,
         height: 52,
+        href: "#navbar",
       },
     },
     rightContainer: {

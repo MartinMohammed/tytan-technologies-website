@@ -171,7 +171,7 @@ export interface INewsItem {
 
 // --- Footer ---
 export interface IFooterLeftContainer {
-  logo: IImage;
+  logo: ILinkImage;
 }
 
 export interface IFooterRightContainer {
