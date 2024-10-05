@@ -1,4 +1,8 @@
 // --- Enums ---
+
+import { ReactNode } from "react";
+
+// --- Text Styles ---
 export enum TEXT_STYLES_ENUM {
   LINK_ITEM_TEXT_STYLE = "link_item_text_style",
   LARGE_TEXT_STYLE = "large_text_style",
@@ -7,18 +11,56 @@ export enum TEXT_STYLES_ENUM {
   EXTRA_SMALL_TEXT_STYLE = "extra_small_text_style",
   CAROUSEL_NAV_ITEM_TEXT_STYLE = "carousel_nav_item_text_style",
 }
+// ---------------------------------------
 
+// --- Animations ---
 export enum ANIMATIONS_ENUM {
   HOVER_UNDERLINE = "hover_underline",
 }
+// ---------------------------------------
 
-export enum CAROUSEL_ITEM_TYPE_ENUM {
+// --- Media types ---
+export enum MEDIA_TYPES_ENUM {
   VIDEO = "video",
   IMAGE = "image",
 }
+// ---------------------------------------
 
 // --- Interfaces ---
 // --- Common Interfaces ---
+
+// ---------------------------------------
+export interface GenericSection {
+  ContentWrapper: IContentWrapper;
+}
+
+// --- Carousel ---
+export interface ICarouselItemSettings {
+  controls?: boolean;
+  autoPlay?: boolean;
+  muted?: boolean;
+  loop?: boolean;
+}
+
+export interface ICarouselItem extends ICarouselItemSettings {
+  src: string;
+  alt: string;
+  content_type: MEDIA_TYPES_ENUM;
+  navLabel: string;
+  title?: string; // Add title for the caption
+  description?: string; // Add description for the caption
+}
+
+// ---------------------------------------
+
+// Characteristic
+export interface ICharacteristicItem {
+  characteristic: string;
+  value: string;
+}
+// ---------------------------------------
+
+// --- Media ---
 export interface IImage {
   src: string;
   alt: string;
@@ -32,58 +74,87 @@ export interface IVideo {
   width?: number;
   height?: number;
 }
+// ---------------------------------------
 
-export interface ICarouselItem {
-  src: string;
-  alt: string;
-  content_type: CAROUSEL_ITEM_TYPE_ENUM;
-  navLabel: string;
-  title?: string; // Add title for the caption
-  description?: string; // Add description for the caption
+// --- Link Item ---
+export interface ILinkItemSettings {
+  targetBlank?: boolean;
+  hover?: boolean;
 }
-
-export interface ILinkItem {
+export interface ILinkItem extends ILinkItemSettings {
   text: string;
   href: string;
-  target_blank?: boolean;
 }
 
-export interface ICharacteristicItem {
-  characteristic: string;
-  value: string;
+// --- Link Image ---
+export interface ILinkImageSettigs {
+  targetBlank?: boolean;
 }
-
-export interface ILinkImage extends IImage {
+export interface ILinkImage extends ILinkImageSettigs, IImage {
   href: string;
 }
+// ---------------------------------------
 
-// Flex Container Settings Interface
+// --- Flex Container ---
 export interface IFlexContainerSettings {
-  leftFlexPercentage: number;
-  gap: number;
-  alignItems: string;
-  justifyContent: string;
-  padding: string;
+  leftFlexPercentage?: number;
+  gap?: number;
+  alignItems?: string;
+  justifyContent?: string;
 }
 
-export interface IHeadingGroup {
+export interface IFlexContainer<T, U> extends IFlexContainerSettings {
+  leftContainer: T;
+  rightContainer: U;
+}
+// ---------------------------------------
+
+// --- Wrapper Container ---
+export interface IContentWrapperSettings {
+  paddingTop?: number;
+  paddingBottom?: number;
+  paddingLeft?: number;
+  paddingRight?: number;
+}
+
+export interface IContentWrapper extends IContentWrapperSettings {}
+
+// ---------------------------------------
+
+// --- Heading Group ---
+export interface IHeadingGroupSettings {
+  gap?: number;
+  widthPct?: number;
+  reverse?: boolean;
+  marginBottom?: number;
+  marginTop?: number;
+  primaryHeadingTextStyle?: TEXT_STYLES_ENUM;
+  primaryHeadingTextColor?: string;
+  subHeadingTextStyle?: TEXT_STYLES_ENUM;
+  subHeadingTextColor?: string;
+}
+
+export interface IHeadingGroup extends IHeadingGroupSettings {
   primaryHeading: string;
   subHeading?: string;
 }
+// ---------------------------------------
 
-// --- Content Interfaces ---
+// --- Content ---
 // --- Navbar Content Type ---
-export interface INavbarContentType {
+export interface INavbarContentType extends GenericSection {
   logo: IImage;
   navItems: ILinkItem[];
   burgerMenu: IImage;
 }
+// ---------------------------------------
 
 // --- Hero Section Content Type ---
-export interface IHeroSectionContentType {
+export interface IHeroSectionContentType extends GenericSection {
   headingGroup: IHeadingGroup;
   video: IVideo;
 }
+// ---------------------------------------
 
 // --- Mission Section 1 Content Type ---
 export interface IMissionSection1LeftContainer {
@@ -94,12 +165,13 @@ export interface IMissionSection1RightContainer {
   body: string[];
 }
 
-export interface IMissionSection1ContentType {
-  flexContainer: IFlexContainerSettings & {
-    leftContainer: IMissionSection1LeftContainer;
-    rightContainer: IMissionSection1RightContainer;
-  };
+export interface IMissionSection1ContentType extends GenericSection {
+  flexContainer: IFlexContainer<
+    IMissionSection1LeftContainer,
+    IMissionSection1RightContainer
+  >;
 }
+// ---------------------------------------
 
 // --- Mission Section 2 Content Type ---
 export interface IMissionSection2LeftContainer {
@@ -110,12 +182,13 @@ export interface IMissionSection2RightContainer {
   video: IVideo;
 }
 
-export interface IMissionSection2ContentType {
-  flexContainer: IFlexContainerSettings & {
-    leftContainer: IMissionSection2LeftContainer;
-    rightContainer: IMissionSection2RightContainer;
-  };
+export interface IMissionSection2ContentType extends GenericSection {
+  flexContainer: IFlexContainer<
+    IMissionSection2LeftContainer,
+    IMissionSection2RightContainer
+  >;
 }
+// ---------------------------------------
 
 // --- Tytan Interceptor 1 Section Content Type ---
 export interface ITytanInterceptorSection1LeftContainer {
@@ -127,17 +200,19 @@ export interface ITytanInterceptorSection1RightContainer {
   characteristicItems: ICharacteristicItem[];
 }
 
-export interface ITytanInterceptorSection1ContentType {
-  flexContainer: IFlexContainerSettings & {
-    leftContainer: ITytanInterceptorSection1LeftContainer;
-    rightContainer: ITytanInterceptorSection1RightContainer;
-  };
+export interface ITytanInterceptorSection1ContentType extends GenericSection {
+  flexContainer: IFlexContainer<
+    ITytanInterceptorSection1LeftContainer,
+    ITytanInterceptorSection1RightContainer
+  >;
 }
+// ---------------------------------------
 
 // --- Tytan Interceptor 2 Section Content Type ---
-export interface ITytanInterceptorSection2ContentType {
+export interface ITytanInterceptorSection2ContentType extends GenericSection {
   carouselItems: ICarouselItem[];
 }
+// ---------------------------------------
 
 // --- Tytan Interceptor 3 Section Content Type ---
 
@@ -149,18 +224,19 @@ export interface ITytanInterceptorSection3RightContainer {
   image: IImage;
 }
 
-export interface ITytanInterceptor1ContentType {
-  flexContainer: IFlexContainerSettings & {
-    leftContainer: ITytanInterceptorSection1LeftContainer;
-    rightContainer: ITytanInterceptorSection1RightContainer;
-  };
+export interface ITytanInterceptor1ContentType extends GenericSection {
+  flexContainer: IFlexContainer<
+    ITytanInterceptorSection1LeftContainer,
+    ITytanInterceptorSection1RightContainer
+  >;
 }
+// ---------------------------------------
 
-export interface ITytanInterceptorSection3ContentType {
-  flexContainer: IFlexContainerSettings & {
-    leftContainer: ITytanInterceptorSection3LeftContainer;
-    rightContainer: ITytanInterceptorSection3RightContainer;
-  };
+export interface ITytanInterceptorSection3ContentType extends GenericSection {
+  flexContainer: IFlexContainer<
+    ITytanInterceptorSection3LeftContainer,
+    ITytanInterceptorSection3RightContainer
+  >;
 }
 
 // --- Career Section Content Type
@@ -172,14 +248,16 @@ export interface IJobItem {
   href: string;
 }
 
-export interface ICareersSectionContentType {
+export interface ICareersSectionContentType extends GenericSection {
   headingGroup: IHeadingGroup;
   itemsPerPage: number;
   jobs: IJobItem[];
   icon: IImage;
 }
+// ---------------------------------------
+
 // --- News Section Content Type
-export interface INewsSectionContentType {
+export interface INewsSectionContentType extends GenericSection {
   headingGroup: IHeadingGroup;
   itemsPerPage: number;
   news: INewsItem[];
@@ -192,6 +270,7 @@ export interface INewsItem {
   image: IImage;
   href: string;
 }
+// ---------------------------------------
 
 // --- Footer ---
 export interface IFooterLeftContainer {
@@ -203,9 +282,7 @@ export interface IFooterRightContainer {
   footerSocialIcons: ILinkImage[];
 }
 
-export interface IFooterContentType {
-  flexContainer: IFlexContainerSettings & {
-    leftContainer: IFooterLeftContainer;
-    rightContainer: IFooterRightContainer;
-  };
+export interface IFooterContentType extends GenericSection {
+  flexContainer: IFlexContainer<IFooterLeftContainer, IFooterRightContainer>;
 }
+// ---------------------------------------

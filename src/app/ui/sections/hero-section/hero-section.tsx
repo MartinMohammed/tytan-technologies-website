@@ -2,7 +2,6 @@ import React from "react";
 import styles from "@/app/ui/sections/hero-section/hero-section.module.css";
 import { HeroSectionContent } from "@/app/lib/content"; // Ensure that the path to the content file is correct
 import HeadingGroup from "@/app/ui/components/heading-group/heading-group";
-import { TEXT_STYLES_ENUM } from "@/app/lib/definition";
 
 function HeroSection() {
   return (
@@ -20,10 +19,14 @@ function HeroSection() {
         <div className={styles.heading_group_container}>
           <HeadingGroup
             primaryHeading={HeroSectionContent.headingGroup.primaryHeading}
-            primaryHeadingTextStyle={TEXT_STYLES_ENUM.LARGE_TEXT_STYLE}
+            primaryHeadingTextStyle={
+              HeroSectionContent.headingGroup.primaryHeadingTextStyle
+            }
             subHeading={HeroSectionContent.headingGroup.subHeading}
-            subHeadingTextColor="var(--text_primary)"
-            reverse={true}
+            subHeadingTextColor={
+              HeroSectionContent.headingGroup.subHeadingTextColor
+            }
+            reverse={HeroSectionContent.headingGroup.reverse}
           />
         </div>
       </div>

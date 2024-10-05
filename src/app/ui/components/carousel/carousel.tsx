@@ -1,6 +1,5 @@
 "use client";
-
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styles from "@/app/ui/components/carousel/carousel.module.css";
 import { ICarouselItem } from "@/app/lib/definition";
 import CarouselItem from "@/app/ui/components/carousel/carousel-item";
@@ -16,7 +15,7 @@ function Carousel({ items }: ICarouselProps) {
   return (
     <div className={styles.carousel_container}>
       <div className={styles.carousel_content}>
-        <CarouselItem item={items[activeIndex]} />
+        <CarouselItem {...items[activeIndex]} />
       </div>
       <div className={styles.carousel_nav}>
         {items.map((item, index) => (

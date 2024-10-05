@@ -1,7 +1,7 @@
 // types.ts
 
 import {
-  CAROUSEL_ITEM_TYPE_ENUM,
+  MEDIA_TYPES_ENUM,
   ICareersSectionContentType,
   IFooterContentType,
   IHeroSectionContentType,
@@ -12,10 +12,55 @@ import {
   ITytanInterceptorSection1ContentType,
   ITytanInterceptorSection2ContentType,
   ITytanInterceptorSection3ContentType,
+  TEXT_STYLES_ENUM,
 } from "@/app/lib/definition";
+
+export const DEFAULT_CONSTANTS = {
+  ContentWrapper: {
+    paddingTop: 75,
+    paddingBottom: 75,
+    paddingLeft: 80,
+    paddingRight: 80,
+  },
+  FlexContainer: {
+    leftFlexPercentage: 42,
+    gap: 20,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  HeadingGroup: {
+    gap: 25,
+    reverse: false,
+    reverseGap: 10,
+    widthPct: 100,
+    marginTop: 0,
+    marginBottom: 0,
+    primaryHeadingTextStyle: TEXT_STYLES_ENUM.MEDIUM_TEXT_STYLE,
+    primaryHeadingTextColor: "var(--text_primary)",
+    subHeadingTextStyle: TEXT_STYLES_ENUM.SMALL_TEXT_STYLE,
+    subHeadingTextColor: "var(--text_secondary)",
+  },
+  CarouselItem: {
+    content_type: MEDIA_TYPES_ENUM.VIDEO,
+    controls: false,
+    autoPlay: true,
+    muted: true,
+    loop: true,
+  },
+  LinkItem: {
+    targetBlank: true,
+    hover: true,
+  },
+  LinkImage: {
+    targetBlank: true,
+    width: 48,
+    height: 48,
+  },
+};
 
 // --- Navbar ---
 export const NavbarContent: INavbarContentType = {
+  ContentWrapper: {},
   logo: {
     src: "/tytan_logo_white.svg",
     alt: "Tytan Technologies Logo",
@@ -38,6 +83,7 @@ export const NavbarContent: INavbarContentType = {
 
 // --- Hero ---
 export const HeroSectionContent: IHeroSectionContentType = {
+  ContentWrapper: {},
   video: {
     src: "/opterra_interception_bounding_box.mp4",
     alt: "Opterra interception bounding box Video.",
@@ -45,22 +91,22 @@ export const HeroSectionContent: IHeroSectionContentType = {
   headingGroup: {
     primaryHeading: "Autonomy to protect.",
     subHeading: "TYTAN Technologies",
+    primaryHeadingTextStyle: TEXT_STYLES_ENUM.LARGE_TEXT_STYLE,
+    subHeadingTextColor: "var(--text_primary)",
+    reverse: true,
   },
 };
 
 // --- MissionSection1 ---
 export const MissionSection1Content: IMissionSection1ContentType = {
+  ContentWrapper: {},
   // Settings for <FlexContainer/>
   flexContainer: {
-    leftFlexPercentage: 41.25,
-    gap: 35,
-    alignItems: "center",
-    justifyContent: "left",
-    padding: "75px 80px",
     leftContainer: {
       headingGroup: {
         primaryHeading: "The standard for cost-effective countermeasures",
         subHeading: "Our Mission",
+        reverse: true,
       },
     },
     rightContainer: {
@@ -75,13 +121,9 @@ export const MissionSection1Content: IMissionSection1ContentType = {
 
 // --- MissionSection2 ---
 export const MissionSection2Content: IMissionSection2ContentType = {
+  ContentWrapper: {},
   // Settings for <FlexContainer/>
   flexContainer: {
-    leftFlexPercentage: 41.25,
-    gap: 35,
-    alignItems: "center",
-    justifyContent: "left",
-    padding: "75px 80px",
     leftContainer: {
       headingGroup: {
         primaryHeading: "Our Approach",
@@ -101,13 +143,10 @@ export const MissionSection2Content: IMissionSection2ContentType = {
 // --- Tytan Interceptor Section 1 ---
 export const TytanInterceptorSection1Content: ITytanInterceptorSection1ContentType =
   {
+    ContentWrapper: {},
     // Settings for <FlexContainer/>
     flexContainer: {
       leftFlexPercentage: (4 * 100) / 7,
-      gap: 35,
-      alignItems: "center",
-      justifyContent: "left",
-      padding: "75px 80px",
       leftContainer: {
         image: {
           src: "/tytan-interceptor-mockup.jpg",
@@ -119,6 +158,7 @@ export const TytanInterceptorSection1Content: ITytanInterceptorSection1ContentTy
           primaryHeading: "TYTAN Interceptor",
           subHeading:
             "A cost-effective, AI-driven vertical take-off counter-UAS against NATO classes I-III, neutralising threats with precision through direct kinetic hit.",
+          widthPct: 140,
         },
         characteristicItems: [
           {
@@ -145,11 +185,12 @@ export const TytanInterceptorSection1Content: ITytanInterceptorSection1ContentTy
 // --- Tytan Interceptor Section 2 ---
 export const TytanInterceptorSection2Content: ITytanInterceptorSection2ContentType =
   {
+    ContentWrapper: {},
     carouselItems: [
       {
         src: "/interception_from_target.mp4",
         alt: "Interception from Target mp4",
-        content_type: CAROUSEL_ITEM_TYPE_ENUM.VIDEO,
+        content_type: MEDIA_TYPES_ENUM.VIDEO,
         navLabel: "Autonomous",
         title: "Autonomous",
         description:
@@ -158,7 +199,7 @@ export const TytanInterceptorSection2Content: ITytanInterceptorSection2ContentTy
       {
         src: "/interception_from_target.mp4",
         alt: "Interception from Target mp4",
-        content_type: CAROUSEL_ITEM_TYPE_ENUM.VIDEO,
+        content_type: MEDIA_TYPES_ENUM.VIDEO,
         navLabel: "Cost-Effective",
         title: "Cost-effective",
         description:
@@ -167,7 +208,7 @@ export const TytanInterceptorSection2Content: ITytanInterceptorSection2ContentTy
       {
         src: "/opterra_interception_bounding_box.mp4",
         alt: "Opterra interception bounding box Video.",
-        content_type: CAROUSEL_ITEM_TYPE_ENUM.VIDEO,
+        content_type: MEDIA_TYPES_ENUM.VIDEO,
         navLabel: "Interoperable",
         title: "Interoperability",
         description:
@@ -176,7 +217,7 @@ export const TytanInterceptorSection2Content: ITytanInterceptorSection2ContentTy
       {
         src: "/opterra_interception_bounding_box.mp4",
         alt: "Opterra interception bounding box Video.",
-        content_type: CAROUSEL_ITEM_TYPE_ENUM.VIDEO,
+        content_type: MEDIA_TYPES_ENUM.VIDEO,
         navLabel: "User-Proven",
         title: "User-proven",
         description:
@@ -188,13 +229,12 @@ export const TytanInterceptorSection2Content: ITytanInterceptorSection2ContentTy
 // --- Tytan Interceptor Section 1 ---
 export const TytanInterceptorSection3Content: ITytanInterceptorSection3ContentType =
   {
+    ContentWrapper: {
+      paddingBottom: 0,
+      paddingTop: 0,
+    },
     // Settings for <FlexContainer/>
     flexContainer: {
-      leftFlexPercentage: 41.25,
-      gap: 35,
-      alignItems: "center",
-      justifyContent: "left",
-      padding: "75px 80px",
       leftContainer: {
         headingGroups: [
           {
@@ -220,9 +260,11 @@ export const TytanInterceptorSection3Content: ITytanInterceptorSection3ContentTy
 
 // --- Careers Section ---
 export const CareersSectionContent: ICareersSectionContentType = {
+  ContentWrapper: {},
   headingGroup: {
     primaryHeading: "Join Us",
     subHeading: "Make a lasting impact in the new era of defense!",
+    marginBottom: 90,
   },
   itemsPerPage: 2,
   jobs: [
@@ -244,8 +286,10 @@ export const CareersSectionContent: ICareersSectionContentType = {
 
 // --- News Section ---
 export const NewsSectionContent: INewsSectionContentType = {
+  ContentWrapper: {},
   headingGroup: {
     primaryHeading: "Newsroom",
+    marginBottom: 77,
   },
   itemsPerPage: 3,
   news: [
@@ -288,12 +332,14 @@ export const NewsSectionContent: INewsSectionContentType = {
 
 // --- Footer ---
 export const FooterContent: IFooterContentType = {
+  ContentWrapper: {
+    paddingLeft: 40,
+    paddingRight: 40,
+  },
   flexContainer: {
     leftFlexPercentage: 48,
     gap: 0,
-    alignItems: "center",
-    justifyContent: "left",
-    padding: "75px 40px",
+    justifyContent: "start",
     leftContainer: {
       logo: {
         src: "/tytan_logo_white.svg",
@@ -306,11 +352,10 @@ export const FooterContent: IFooterContentType = {
     rightContainer: {
       // individual nav items
       footerItems: [
-        { text: "IMPRINT", href: "/api/imprint", target_blank: true },
+        { text: "IMPRINT", href: "/api/imprint" },
         {
           text: "PRIVACY & LEGAL",
           href: "/api/privacy-policy",
-          target_blank: true,
         },
         { text: "CONTACT", href: "mailto:info@tytan-technologies.com" },
       ],
@@ -318,16 +363,12 @@ export const FooterContent: IFooterContentType = {
         {
           src: "/youtube-icon.svg",
           alt: "Youtube Icon",
-          href: "#",
-          width: 48,
-          height: 48,
+          href: "#navbar",
         },
         {
           src: "/linkedIn_icon.svg",
           alt: "LinkedIn Icon",
-          href: "#",
-          width: 48,
-          height: 48,
+          href: "https://www.linkedin.com/company/tytan-technologies/",
         },
       ],
     },

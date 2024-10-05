@@ -6,21 +6,20 @@ import {
   ANIMATIONS_ENUM,
   ILinkItem,
 } from "@/app/lib/definition";
+import { DEFAULT_CONSTANTS } from "@/app/lib/content";
 
-interface ILinkItemProps extends ILinkItem {
-  hover?: boolean;
-}
+interface ILinkItemProps extends ILinkItem {}
 
 function LinkItem({
   text,
   href,
-  target_blank = false,
-  hover = true,
+  targetBlank = DEFAULT_CONSTANTS.LinkItem.targetBlank,
+  hover = DEFAULT_CONSTANTS.LinkItem.hover,
 }: ILinkItemProps) {
   return (
     <Link
       href={href}
-      target={target_blank ? "_blank" : "_self"}
+      target={targetBlank ? "_blank" : "_self"}
       className={`${TEXT_STYLES_ENUM.LINK_ITEM_TEXT_STYLE} ${
         hover ? ANIMATIONS_ENUM.HOVER_UNDERLINE : ""
       }`}

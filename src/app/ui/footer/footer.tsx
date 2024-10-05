@@ -6,7 +6,8 @@ import { FooterContent } from "@/app/lib/content";
 import Image from "next/image";
 import LinkItem from "@/app/ui/components/link-item/link-item";
 import Link from "next/link";
-import WrapperContainer from "@/app/ui/components/wrapper-container/wrapper-container";
+import ContentWrapper from "@/app/ui/components/content-wrapper/content-wrapper";
+import LinkImage from "@/app/ui/components/link-image/link-image";
 
 function Footer() {
   const leftContent = (
@@ -26,22 +27,23 @@ function Footer() {
     <div className={styles.right_content_container}>
       <div className={styles.footer_items}>
         {FooterContent.flexContainer.rightContainer.footerItems.map(
-          ({ text, href, target_blank }, index) => (
+          ({ text, href, targetBlank }, index) => (
             <LinkItem
               key={`footer-item-${index}`}
               href={href}
-              target_blank={target_blank}
               text={text}
+              targetBlank={targetBlank}
             />
           )
         )}
       </div>
       <div className={styles.footer_social_icons}>
         {FooterContent.flexContainer.rightContainer.footerSocialIcons.map(
-          ({ src, alt, width, height, href }, index) => (
-            <Link href={href} key={`footer-social-icon-${index}`}>
-              <Image src={src} alt={alt} width={width} height={height} />
-            </Link>
+          (footerSocialIcon, index) => (
+            <LinkImage
+              key={`footer-social-icon-${index}`}
+              {...footerSocialIcon}
+            />
           )
         )}
       </div>
@@ -50,17 +52,18 @@ function Footer() {
 
   return (
     <footer className={styles.footer} id="footer">
-      <WrapperContainer paddingLeft={40} paddingRight={40}>
+      <ContentWrapper
+        paddingLeft={FooterContent.ContentWrapper.paddingLeft}
+        paddingRight={FooterContent.ContentWrapper.paddingRight}
+      >
         <FlexContainer
           leftFlexPercentage={FooterContent.flexContainer.leftFlexPercentage}
           gap={FooterContent.flexContainer.gap}
           leftComponent={leftContent}
           rightComponent={rightContent}
-          padding={FooterContent.flexContainer.padding}
-          alignItems={FooterContent.flexContainer.alignItems}
           justifyContent={FooterContent.flexContainer.justifyContent}
         />
-      </WrapperContainer>
+      </ContentWrapper>
     </footer>
   );
 }

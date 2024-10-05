@@ -2,7 +2,7 @@ import React from "react";
 import styles from "@/app/ui/sections/mission-section-2/mission-section-2.module.css";
 import { MissionSection2Content } from "@/app/lib/content";
 import FlexContainer from "@/app/ui/components/flex-container/flex-container";
-import WrapperContainer from "@/app/ui/components/wrapper-container/wrapper-container";
+import ContentWrapper from "@/app/ui/components/content-wrapper/content-wrapper";
 import HeadingGroup from "@/app/ui/components/heading-group/heading-group";
 
 function MissionSection2() {
@@ -35,19 +35,15 @@ function MissionSection2() {
 
   return (
     <section className={styles.mission_section_2} id="mission-section-2">
-      <WrapperContainer>
+      <ContentWrapper>
         <FlexContainer
           leftFlexPercentage={
             MissionSection2Content.flexContainer.leftFlexPercentage
           }
-          gap={MissionSection2Content.flexContainer.gap}
           leftComponent={leftContent}
           rightComponent={rightContent}
-          padding={MissionSection2Content.flexContainer.padding}
-          alignItems={MissionSection2Content.flexContainer.alignItems}
-          justifyContent={MissionSection2Content.flexContainer.justifyContent}
         />
-      </WrapperContainer>
+      </ContentWrapper>
     </section>
   );
 }

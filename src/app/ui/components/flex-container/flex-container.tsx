@@ -1,25 +1,21 @@
 // FlexContainer.jsx
 import React, { CSSProperties, ReactNode } from "react";
 import styles from "@/app/ui/components/flex-container/flex-container.module.css";
+import { DEFAULT_CONSTANTS } from "@/app/lib/content";
+import { IFlexContainerSettings } from "@/app/lib/definition";
 
-interface IFlexContainerProps {
-  leftFlexPercentage?: number;
-  rightFlexPercentage?: number;
+interface IFlexContainerProps extends IFlexContainerSettings {
   leftComponent: ReactNode;
   rightComponent: ReactNode;
-  gap?: number;
-  padding?: string;
-  alignItems?: string; // Optional align-items property
-  justifyContent?: string; // Optional justify-content property
 }
 
 function FlexContainer({
-  leftFlexPercentage = 50,
   leftComponent,
   rightComponent,
-  gap = 0,
-  alignItems = "start", // Default align-items value
-  justifyContent = "left", // Default justify-content value inside flex items
+  leftFlexPercentage = DEFAULT_CONSTANTS.FlexContainer.leftFlexPercentage,
+  gap = DEFAULT_CONSTANTS.FlexContainer.gap,
+  alignItems = DEFAULT_CONSTANTS.FlexContainer.alignItems,
+  justifyContent = DEFAULT_CONSTANTS.FlexContainer.justifyContent,
 }: IFlexContainerProps) {
   const rightFlexPercentage = 100 - leftFlexPercentage;
   const containerStyle: CSSProperties = {

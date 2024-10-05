@@ -25,7 +25,11 @@ function NewsListContainer({
         {news
           .slice(currentPage * itemsPerPage, (currentPage + 1) * itemsPerPage)
           .map((newsItem, index) => (
-            <NewsItem key={index} newsItem={newsItem} icon={icon} />
+            <NewsItem
+              key={`news-item-${index}`}
+              newsItem={newsItem}
+              icon={icon}
+            />
           ))}
       </div>
 

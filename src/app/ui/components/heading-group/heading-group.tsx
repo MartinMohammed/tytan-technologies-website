@@ -1,36 +1,29 @@
 import React, { CSSProperties } from "react";
 import styles from "@/app/ui/components/heading-group/heading-group.module.css";
-import { IHeadingGroup, TEXT_STYLES_ENUM } from "@/app/lib/definition";
+import { IHeadingGroup } from "@/app/lib/definition";
+import { DEFAULT_CONSTANTS } from "@/app/lib/content";
 
-interface IHeadingGroupProps extends IHeadingGroup {
-  gap?: number;
-  widthPct?: number;
-  reverse?: boolean;
-  marginBottom?: number;
-  marginTop?: number;
-  primaryHeadingTextStyle?: TEXT_STYLES_ENUM;
-  primaryHeadingTextColor?: string;
-  subHeadingTextStyle?: TEXT_STYLES_ENUM;
-  subHeadingTextColor?: string;
-}
+interface IHeadingGroupProps extends IHeadingGroup {}
 
 function HeadingGroup({
   primaryHeading,
   subHeading,
-  gap = 25,
-  reverse = false,
-  widthPct = 100,
-  marginBottom = 0,
-  marginTop = 0,
-  primaryHeadingTextStyle = TEXT_STYLES_ENUM.MEDIUM_TEXT_STYLE,
-  primaryHeadingTextColor = "var(--text_primary)",
-  subHeadingTextStyle = TEXT_STYLES_ENUM.SMALL_TEXT_STYLE,
-  subHeadingTextColor = "var(--text_secondary)",
+  gap = DEFAULT_CONSTANTS.HeadingGroup.gap,
+  reverse = DEFAULT_CONSTANTS.HeadingGroup.reverse,
+  widthPct = DEFAULT_CONSTANTS.HeadingGroup.widthPct,
+  marginBottom = DEFAULT_CONSTANTS.HeadingGroup.marginBottom,
+  marginTop = DEFAULT_CONSTANTS.HeadingGroup.marginTop,
+  primaryHeadingTextStyle = DEFAULT_CONSTANTS.HeadingGroup
+    .primaryHeadingTextStyle,
+  primaryHeadingTextColor = DEFAULT_CONSTANTS.HeadingGroup
+    .primaryHeadingTextColor,
+  subHeadingTextStyle = DEFAULT_CONSTANTS.HeadingGroup.subHeadingTextStyle,
+  subHeadingTextColor = DEFAULT_CONSTANTS.HeadingGroup.subHeadingTextColor,
 }: IHeadingGroupProps) {
   // If subheading is not defined then gap is 0
   gap = subHeading ? gap : 0;
   // Adjust the gap if reverse is activtated to 10px else geep it same
-  gap = reverse ? 10 : gap;
+  gap = reverse ? DEFAULT_CONSTANTS.HeadingGroup.reverseGap : gap;
 
   const containerStyle: CSSProperties = {
     "--gap": `${gap}px`,
@@ -49,12 +42,14 @@ function HeadingGroup({
 
   const headings = [
     <h2
+      key={`primary-heading`}
       className={`${styles.primary_heading} ${primaryHeadingTextStyle}`}
       style={primaryHeadingStyle}
     >
       {primaryHeading}
     </h2>,
     <h3
+      key={`sub-heading`}
       className={`${styles.sub_heading} ${subHeadingTextStyle}`}
       style={subHeadingStyle}
     >

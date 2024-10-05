@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@/app/ui/sections/tytan-interceptor-section-1/tytan-interceptor-section-1.module.css";
 import Image from "next/image";
-import WrapperContainer from "@/app/ui/components/wrapper-container/wrapper-container";
+import ContentWrapper from "@/app/ui/components/content-wrapper/content-wrapper";
 import { TytanInterceptorSection1Content } from "@/app/lib/content";
 import CharacteristicItem from "@/app/ui/components/characteristic-item/characteristic-item";
 import FlexContainer from "@/app/ui/components/flex-container/flex-container";
@@ -30,7 +30,10 @@ function TytanInterceptorSection1() {
   const rightContent = (
     <div className={styles.right_content_container}>
       <HeadingGroup
-        widthPct={140}
+        widthPct={
+          TytanInterceptorSection1Content.flexContainer.rightContainer
+            .headingGroup.widthPct
+        }
         primaryHeading={
           TytanInterceptorSection1Content.flexContainer.rightContainer
             .headingGroup.primaryHeading
@@ -62,21 +65,15 @@ function TytanInterceptorSection1() {
       className={styles.tytan_interceptor_section_1}
       id="tytan-interceptor-section-1"
     >
-      <WrapperContainer>
+      <ContentWrapper>
         <FlexContainer
           leftFlexPercentage={
             TytanInterceptorSection1Content.flexContainer.leftFlexPercentage
           }
-          gap={TytanInterceptorSection1Content.flexContainer.gap}
           leftComponent={leftContent}
           rightComponent={rightContent}
-          padding={TytanInterceptorSection1Content.flexContainer.padding}
-          alignItems={TytanInterceptorSection1Content.flexContainer.alignItems}
-          justifyContent={
-            TytanInterceptorSection1Content.flexContainer.justifyContent
-          }
         />
-      </WrapperContainer>
+      </ContentWrapper>
     </section>
   );
 }
