@@ -2,15 +2,6 @@
 .footer {
 }
 
-.footer_logo {
-  transition: transform 0.2s ease; /* Adds smooth transition */
-  display: block;
-}
-
-.footer_logo:hover {
-  transform: scale(1.02); /* Scales the icon slightly */
-}
-
 .left_content_container {
 }
 

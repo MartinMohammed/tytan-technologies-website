@@ -3,6 +3,7 @@ import { ILinkImage } from "@/app/lib/definition";
 import Image from "next/image";
 import Link from "next/link";
 import React, { CSSProperties } from "react";
+import styles from "@/app/ui/components/link-image/link-image.module.css";
 
 interface ILinkImageProps extends ILinkImage {}
 
@@ -11,10 +12,22 @@ function LinkImage({
   href,
   alt,
   targetBlank = DEFAULT_CONSTANTS.LinkImage.targetBlank,
+  width = DEFAULT_CONSTANTS.LinkImage.width,
+  height = DEFAULT_CONSTANTS.LinkImage.height,
 }: ILinkImageProps) {
+  const linkStyle: CSSProperties = {
+    "--width": `${width}px`,
+    "--height": `${height}px`,
+  } as CSSProperties;
+
   return (
-    <Link href={href} target={targetBlank ? "_blank" : "_self"}>
-      <Image src={src} alt={alt} width={0} height={0} />
+    <Link
+      href={href}
+      target={targetBlank ? "_blank" : "_self"}
+      className={styles.link}
+      style={linkStyle}
+    >
+      <Image src={src} alt={alt} fill className="media_fit_container" />
     </Link>
   );
 }

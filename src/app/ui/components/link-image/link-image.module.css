@@ -1,0 +1,6 @@
+.link {
+  display: block;
+  width: var(--width, 48px);
+  height: var(--height, 48px);
+  position: relative;
+}

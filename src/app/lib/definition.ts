@@ -143,7 +143,7 @@ export interface IHeadingGroup extends IHeadingGroupSettings {
 // --- Content ---
 // --- Navbar Content Type ---
 export interface INavbarContentType extends GenericSection {
-  logo: IImage;
+  logo: ILinkImage;
   navItems: ILinkItem[];
   burgerMenu: IImage;
 }

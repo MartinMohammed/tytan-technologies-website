@@ -53,6 +53,8 @@ export const DEFAULT_CONSTANTS = {
   },
   LinkImage: {
     targetBlank: true,
+    width: 48,
+    height: 48,
   },
 };
 
@@ -64,11 +66,12 @@ export const NavbarContent: INavbarContentType = {
     alt: "Tytan Technologies Logo",
     width: 183,
     height: 46,
+    href: "#",
   },
   // individual nav items
   navItems: [
-    { text: "Join Us", href: "#careers-section" },
-    { text: "News", href: "#news-section" },
+    { text: "Join Us", href: "#careers-section", targetBlank: false },
+    { text: "News", href: "#news-section", targetBlank: false },
     { text: "Contact", href: "mailto:info@tytan-technologies.com" },
   ],
   burgerMenu: {
@@ -289,7 +292,7 @@ export const NewsSectionContent: INewsSectionContentType = {
     primaryHeading: "Newsroom",
     marginBottom: 77,
   },
-  itemsPerPage: 3,
+  itemsPerPage: 2,
   news: [
     {
       date: new Date("2024-06-18"), // Correct Date object format (ISO 8601)
@@ -345,6 +348,7 @@ export const FooterContent: IFooterContentType = {
         width: 205.14,
         height: 52,
         href: "#navbar",
+        targetBlank: false,
       },
     },
     rightContainer: {

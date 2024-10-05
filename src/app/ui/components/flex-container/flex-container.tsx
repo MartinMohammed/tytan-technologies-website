@@ -22,7 +22,7 @@ function FlexContainer({
     "--gap": `${gap}px`,
     "--align-items": alignItems, // Passing align-items value
     "--justify-content": justifyContent, // Passing justify-content value
-  } as React.CSSProperties;
+  } as CSSProperties;
 
   const leftStyle: CSSProperties = {
     flex: `0 0 ${leftFlexPercentage}%`,

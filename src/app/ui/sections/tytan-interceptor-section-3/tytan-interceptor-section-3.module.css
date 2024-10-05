@@ -21,7 +21,7 @@
 }
 
 /* Large screens, for desktop sizes greater than 1440px */
-@media (min-width: 1440px) {
+@media (min-width: 1600px) {
   .right_content_container {
     height: 955px;
   }

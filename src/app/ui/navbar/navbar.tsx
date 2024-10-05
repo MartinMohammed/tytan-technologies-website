@@ -2,9 +2,9 @@
 import React from "react";
 import styles from "@/app/ui/navbar/navbar.module.css";
 import Image from "next/image";
-import Link from "next/link";
 import { NavbarContent } from "@/app/lib/content";
 import LinkItem from "@/app/ui/components/link-item/link-item";
+import LinkImage from "@/app/ui/components/link-image/link-image";
 
 const SHOW_BURGER_MENU = false;
 
@@ -13,22 +13,27 @@ function NavBar() {
     <nav className={styles.navbar} id="navbar">
       {/* Flexbox container with space-between alignment */}
       <div className={styles.navbar_left}>
-        <Link href={"#"} className={styles.navbar_logo}>
-          <Image
-            src={NavbarContent.logo.src}
-            width={NavbarContent.logo.width}
-            height={NavbarContent.logo.height}
-            alt={NavbarContent.logo.alt}
-          />
-        </Link>
+        <LinkImage
+          targetBlank={NavbarContent.logo.targetBlank}
+          src={NavbarContent.logo.src}
+          alt={NavbarContent.logo.alt}
+          href={NavbarContent.logo.href}
+          width={NavbarContent.logo.width}
+          height={NavbarContent.logo.height}
+        />
       </div>
       {/* Flexbox to group nav items and burger menu */}
       <div className={styles.navbar_right}>
         {/* Container for nav items with specified gap */}
         <div className={styles.nav_items}>
-          {NavbarContent.navItems.map(({ text, href }, index) => {
+          {NavbarContent.navItems.map(({ text, href, targetBlank }, index) => {
             return (
-              <LinkItem key={`nav-item-${index}`} href={href} text={text} />
+              <LinkItem
+                key={`nav-item-${index}`}
+                href={href}
+                text={text}
+                targetBlank={targetBlank}
+              />
             );
           })}
         </div>

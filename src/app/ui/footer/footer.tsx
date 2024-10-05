@@ -3,26 +3,21 @@ import React from "react";
 import styles from "@/app/ui/footer/footer.module.css";
 import FlexContainer from "@/app/ui/components/flex-container/flex-container";
 import { FooterContent } from "@/app/lib/content";
-import Image from "next/image";
 import LinkItem from "@/app/ui/components/link-item/link-item";
-import Link from "next/link";
 import ContentWrapper from "@/app/ui/components/content-wrapper/content-wrapper";
 import LinkImage from "@/app/ui/components/link-image/link-image";
 
 function Footer() {
   const leftContent = (
     <div className={styles.left_content_container}>
-      <Link
+      <LinkImage
+        targetBlank={FooterContent.flexContainer.leftContainer.logo.targetBlank}
+        src={FooterContent.flexContainer.leftContainer.logo.src}
+        width={FooterContent.flexContainer.leftContainer.logo.width}
+        height={FooterContent.flexContainer.leftContainer.logo.height}
         href={FooterContent.flexContainer.leftContainer.logo.href}
-        className={styles.footer_logo}
-      >
-        <Image
-          src={FooterContent.flexContainer.leftContainer.logo.src}
-          width={FooterContent.flexContainer.leftContainer.logo.width}
-          height={FooterContent.flexContainer.leftContainer.logo.height}
-          alt={FooterContent.flexContainer.leftContainer.logo.alt}
-        />
-      </Link>
+        alt={FooterContent.flexContainer.leftContainer.logo.alt}
+      />
     </div>
   );
 
