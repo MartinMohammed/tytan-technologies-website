@@ -42,7 +42,7 @@
 }
 
 .characteristics {
-  width: 75%; /* +compensation for the width loss due to the image overlap */
+  width: 80%; /* +compensation for the width loss due to the image overlap */
   display: flex;
   flex-direction: column;
   gap: 26px; /* Add vertical spacing between each characteristic row */

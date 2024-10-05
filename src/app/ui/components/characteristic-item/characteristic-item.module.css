@@ -3,11 +3,23 @@
   justify-content: space-between;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--text_primary); /* This adds the white line below each spec */
+  transition: color 0.3s ease, border-bottom-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.characteristic_item_row:hover {
+  color: var(--text_secondary); /* Changes the text color on hover */
+  border-bottom-color: var(
+    --text_secondary
+  ); /* Changes the border color on hover */
+  transform: scale(1.05); /* Slight scaling effect on hover */
 }
 
 .characteristic_item_label {
+  transition: color 0.3s ease; /* Smooth color transition for the label */
 }
 
 .characteristic_item_value {
-  color: var(--text_secondary);
+  color: var(--text_secondary); /* Initial color for the value */
+  transition: color 0.3s ease; /* Smooth color transition for the value */
 }
