@@ -13,7 +13,7 @@ function NavBar() {
     <nav className={styles.navbar} id="navbar">
       {/* Flexbox container with space-between alignment */}
       <div className={styles.navbar_left}>
-        <Link href={"#"}>
+        <Link href={"#"} className={styles.navbar_logo}>
           <Image
             src={NavbarContent.logo.src}
             width={NavbarContent.logo.width}

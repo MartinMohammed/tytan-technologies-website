@@ -9,6 +9,14 @@
   padding: 5px 40px; /* Top/Bottom: 5px, Left/Right: 40px */
 }
 
+.navbar_logo {
+  transition: transform 0.2s ease; /* Adds smooth transition */
+}
+
+.navbar_logo:hover {
+  transform: scale(1.02); /* Scales the icon slightly */
+}
+
 .navbar_left {
   display: flex;
   align-items: center;
