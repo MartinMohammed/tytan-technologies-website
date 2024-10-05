@@ -104,8 +104,8 @@ export interface IFlexContainerSettings {
 }
 
 export interface IFlexContainer<T, U> extends IFlexContainerSettings {
-  leftContainer: T;
-  rightContainer: U;
+  leftContainerContent: T;
+  rightContainerContent: U;
 }
 // ---------------------------------------
 

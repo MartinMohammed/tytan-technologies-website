@@ -10,7 +10,8 @@ function MissionSection2() {
   const leftContainer = (
     <div className={styles.left_content_container}>
       <HeadingGroup
-        {...MissionSection2Content.flexContainer.leftContainer.headingGroup}
+        {...MissionSection2Content.flexContainer.leftContainerContent
+          .headingGroup}
       />
     </div>
   );
@@ -18,7 +19,9 @@ function MissionSection2() {
   const rightContainer = (
     <div className={styles.right_content_container}>
       <video
-        src={MissionSection2Content.flexContainer.rightContainer.video.src}
+        src={
+          MissionSection2Content.flexContainer.rightContainerContent.video.src
+        }
         autoPlay
         loop
         muted
@@ -32,8 +35,8 @@ function MissionSection2() {
       <ContentWrapper {...MissionSection2Content.ContentWrapper}>
         <FlexContainer
           {...omit(MissionSection2Content.flexContainer, [
-            "leftContainer",
-            "rightContainer",
+            "leftContainerContent",
+            "rightContainerContent",
           ])}
           leftComponent={leftContainer}
           rightComponent={rightContainer}

@@ -10,7 +10,7 @@ import { omit } from "@/app/lib/utils";
 function TytanInterceptorSection3() {
   const leftContainer = (
     <div className={styles.left_content_container}>
-      {TytanInterceptorSection3Content.flexContainer.leftContainer.headingGroups.map(
+      {TytanInterceptorSection3Content.flexContainer.leftContainerContent.headingGroups.map(
         (headingGroup, index) => {
           return (
             <HeadingGroup
@@ -25,7 +25,8 @@ function TytanInterceptorSection3() {
   const rightContainer = (
     <div className={styles.right_content_container}>
       <Image
-        {...TytanInterceptorSection3Content.flexContainer.rightContainer.image}
+        {...TytanInterceptorSection3Content.flexContainer.rightContainerContent
+          .image}
         fill
         priority
         className={`media_fit_container ${styles.right_content_container_image_item}`}
@@ -40,8 +41,8 @@ function TytanInterceptorSection3() {
       <ContentWrapper {...TytanInterceptorSection3Content.ContentWrapper}>
         <FlexContainer
           {...omit(TytanInterceptorSection3Content.flexContainer, [
-            "leftContainer",
-            "rightContainer",
+            "leftContainerContent",
+            "rightContainerContent",
           ])}
           leftComponent={leftContainer}
           rightComponent={rightContainer}

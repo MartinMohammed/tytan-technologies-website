@@ -11,14 +11,15 @@ function MissionSection1() {
   const leftContainer = (
     <div className={styles.left_content_container}>
       <HeadingGroup
-        {...MissionSection1Content.flexContainer.leftContainer.headingGroup}
+        {...MissionSection1Content.flexContainer.leftContainerContent
+          .headingGroup}
       />
     </div>
   );
 
   const rightContainer = (
     <div className={styles.right_content_container}>
-      {MissionSection1Content.flexContainer.rightContainer.body.map(
+      {MissionSection1Content.flexContainer.rightContainerContent.body.map(
         (bodyPart, index) => {
           return (
             <p
@@ -38,8 +39,8 @@ function MissionSection1() {
       <ContentWrapper {...MissionSection1Content.ContentWrapper}>
         <FlexContainer
           {...omit(MissionSection1Content.flexContainer, [
-            "leftContainer",
-            "rightContainer",
+            "leftContainerContent",
+            "rightContainerContent",
           ])}
           leftComponent={leftContainer}
           rightComponent={rightContainer}

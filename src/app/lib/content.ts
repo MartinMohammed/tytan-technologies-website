@@ -67,7 +67,7 @@ export const NavbarContent: INavbarContentType = {
     alt: "Tytan Technologies Logo",
     width: 183,
     height: 46,
-    href: "#",
+    href: "#footer",
     targetBlank: false,
   },
   // individual nav items
@@ -104,14 +104,14 @@ export const MissionSection1Content: IMissionSection1ContentType = {
   ContentWrapper: {},
   // Settings for <FlexContainer/>
   flexContainer: {
-    leftContainer: {
+    leftContainerContent: {
       headingGroup: {
         primaryHeading: "The standard for cost-effective countermeasures",
         subHeading: "Our Mission",
         reverse: true,
       },
     },
-    rightContainer: {
+    rightContainerContent: {
       // individual p-items.
       body: [
         "TYTAN Technologies leads in developing AI-powered, cost-effective counter-drone solutions that strengthen democratic nations.",
@@ -126,14 +126,14 @@ export const MissionSection2Content: IMissionSection2ContentType = {
   ContentWrapper: {},
   // Settings for <FlexContainer/>
   flexContainer: {
-    leftContainer: {
+    leftContainerContent: {
       headingGroup: {
         primaryHeading: "Our Approach",
         subHeading:
           "At TYTAN Technologies, we believe in a fully integrated security approach that covers the entire threat response spectrum. We intend to create an ecosystem of autonomous systems that provide adaptable and scalable solutions improving safety and operational effectiveness.",
       },
     },
-    rightContainer: {
+    rightContainerContent: {
       video: {
         src: "/tytan_anim.mp4",
       },
@@ -148,13 +148,13 @@ export const TytanInterceptorSection1Content: ITytanInterceptorSection1ContentTy
     // Settings for <FlexContainer/>
     flexContainer: {
       leftFlexPercentage: (4 * 100) / 7,
-      leftContainer: {
+      leftContainerContent: {
         image: {
           src: "/tytan-interceptor-mockup.jpg",
           alt: "tytan interceptor mockup",
         },
       },
-      rightContainer: {
+      rightContainerContent: {
         headingGroup: {
           primaryHeading: "TYTAN Interceptor",
           subHeading:
@@ -232,7 +232,7 @@ export const TytanInterceptorSection3Content: ITytanInterceptorSection3ContentTy
     },
     // Settings for <FlexContainer/>
     flexContainer: {
-      leftContainer: {
+      leftContainerContent: {
         headingGroups: [
           {
             primaryHeading: "Autonomous Interceptor",
@@ -246,7 +246,7 @@ export const TytanInterceptorSection3Content: ITytanInterceptorSection3ContentTy
           },
         ],
       },
-      rightContainer: {
+      rightContainerContent: {
         image: {
           src: "/tytan-technologies-intereceptor-illustration.png",
           alt: "Tytan Technologies Interceptor Illustration",
@@ -337,7 +337,7 @@ export const FooterContent: IFooterContentType = {
     leftFlexPercentage: 48,
     gap: 0,
     justifyContent: "start",
-    leftContainer: {
+    leftContainerContent: {
       logo: {
         src: "/tytan_logo_white.svg",
         alt: "Tytan Technologies Logo",
@@ -347,7 +347,7 @@ export const FooterContent: IFooterContentType = {
         targetBlank: false,
       },
     },
-    rightContainer: {
+    rightContainerContent: {
       // individual nav items
       footerItems: [
         { text: "IMPRINT", href: "/api/imprint" },

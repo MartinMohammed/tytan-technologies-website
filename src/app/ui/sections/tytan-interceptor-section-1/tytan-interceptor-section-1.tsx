@@ -12,7 +12,8 @@ function TytanInterceptorSection1() {
   const leftContainer = (
     <div className={styles.left_content_container}>
       <Image
-        {...TytanInterceptorSection1Content.flexContainer.leftContainer.image}
+        {...TytanInterceptorSection1Content.flexContainer.leftContainerContent
+          .image}
         fill
         priority
         className={`media_fit_container ${styles.left_content_container_image_item}`}
@@ -26,13 +27,13 @@ function TytanInterceptorSection1() {
   const rightContainer = (
     <div className={styles.right_content_container}>
       <HeadingGroup
-        {...TytanInterceptorSection1Content.flexContainer.rightContainer
+        {...TytanInterceptorSection1Content.flexContainer.rightContainerContent
           .headingGroup}
       />
 
       {/* Specifications */}
       <div className={styles.characteristics}>
-        {TytanInterceptorSection1Content.flexContainer.rightContainer.characteristicItems.map(
+        {TytanInterceptorSection1Content.flexContainer.rightContainerContent.characteristicItems.map(
           (characteristicItem, index) => {
             return (
               <CharacteristicItem
@@ -54,8 +55,8 @@ function TytanInterceptorSection1() {
       <ContentWrapper {...TytanInterceptorSection1Content.ContentWrapper}>
         <FlexContainer
           {...omit(TytanInterceptorSection1Content.flexContainer, [
-            "leftContainer",
-            "rightContainer",
+            "leftContainerContent",
+            "rightContainerContent",
           ])}
           leftComponent={leftContainer}
           rightComponent={rightContainer}

@@ -11,21 +11,21 @@ import { omit } from "@/app/lib/utils";
 function Footer() {
   const leftContainer = (
     <div className={styles.left_content_container}>
-      <LinkImage {...FooterContent.flexContainer.leftContainer.logo} />
+      <LinkImage {...FooterContent.flexContainer.leftContainerContent.logo} />
     </div>
   );
 
   const rightContainer = (
     <div className={styles.right_content_container}>
       <div className={styles.footer_items}>
-        {FooterContent.flexContainer.rightContainer.footerItems.map(
+        {FooterContent.flexContainer.rightContainerContent.footerItems.map(
           (linkItem, index) => (
             <LinkItem key={`footer-item-${index}`} {...linkItem} />
           )
         )}
       </div>
       <div className={styles.footer_social_icons}>
-        {FooterContent.flexContainer.rightContainer.footerSocialIcons.map(
+        {FooterContent.flexContainer.rightContainerContent.footerSocialIcons.map(
           (footerSocialIcon, index) => (
             <LinkImage
               key={`footer-social-icon-${index}`}
@@ -44,8 +44,8 @@ function Footer() {
           leftComponent={leftContainer}
           rightComponent={rightContainer}
           {...omit(FooterContent.flexContainer, [
-            "leftContainer",
-            "rightContainer",
+            "leftContainerContent",
+            "rightContainerContent",
           ])}
         />
       </ContentWrapper>
