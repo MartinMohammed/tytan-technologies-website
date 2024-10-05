@@ -53,8 +53,6 @@ export const DEFAULT_CONSTANTS = {
   },
   LinkImage: {
     targetBlank: true,
-    width: 48,
-    height: 48,
   },
 };
 
